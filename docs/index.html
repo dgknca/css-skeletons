@@ -37,7 +37,6 @@
 
             <div class="properties">
                 <span class="class">.line</span>
-                <span class="prop">Default</span>
             </div>
 
             <div class="box">
@@ -48,15 +47,26 @@
             </div>
 
             <div class="properties">
+                <span class="class">.rounded</span>
+            </div>
+
+            <div class="box">
+<pre><code class="code">&lt;div class="skeleton line rounded">&lt;/div></code></pre>
+                <div class="result">
+                    <div class="skeleton line rounded"></div>
+                </div>
+            </div>
+
+            <div class="properties">
                 <span class="prop">--l-h (line-height)</span>
             </div>
             <p class="description">
                 If you want to change the default values, just send it in style="".
             </p>
             <div class="box">
-<pre><code class="code">&lt;div class="skeleton line" style="--l-h:40px;">&lt;/div></code></pre>
+<pre><code class="code">&lt;div class="skeleton line rounded" style="--l-h:40px;">&lt;/div></code></pre>
                 <div class="result">
-                    <div class="skeleton line" style="--l-h:40px;"></div>
+                    <div class="skeleton line rounded" style="--l-h:40px;"></div>
                 </div>
             </div>
 
@@ -65,9 +75,9 @@
             </div>
             <p class="description">No height needed. The height will be calculated automatically based on the number of lines and other default values.</p>
             <div class="box">
-<pre><code class="code">&lt;div class="skeleton line" style="--lines:3">&lt;/div></code></pre>
+<pre><code class="code">&lt;div class="skeleton line rounded" style="--lines:3">&lt;/div></code></pre>
                 <div class="result">
-                    <div class="skeleton line" style="--lines:3"></div>
+                    <div class="skeleton line rounded" style="--lines:3"></div>
                 </div>
             </div>
 

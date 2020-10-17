@@ -59,6 +59,18 @@
     -webkit-mask: var(--mask);
             mask: var(--mask);
   }
+
+  &.rounded {
+    &::before,
+    &::after {
+      --mask: 
+      linear-gradient(var(--bg) 0 var(--l-h),transparent var(--l-h) calc(var(--l-h) + var(--l-gap))) calc(var(--l-h) / 2) 0/calc(100% - var(--l-h)) calc(var(--l-h) + var(--l-gap)) no-repeat repeat,
+      radial-gradient(calc(var(--l-h) / 2) calc(var(--l-h) / 2) at 50% 50%,var(--bg) 98%,transparent 100%) 0 0% / calc(var(--l-h)) calc(var(--l-h))  no-repeat repeat,
+      radial-gradient(calc(var(--l-h) / 2) calc(var(--l-h) / 2) at 50% 50%,var(--bg) 98%,transparent 100%) 100% 0% / calc(var(--l-h)) calc(var(--l-h))  no-repeat repeat;
+      -webkit-mask: var(--mask);
+              mask: var(--mask);
+    }
+  }
 }
 
 .skeleton.circle {
@@ -67,7 +79,7 @@
 
   &::before,
   &::after {
-    --mask: radial-gradient(calc(var(--c-s) / 2) calc(var(--c-s) / 2) at 50% 50%,var(--bg) 98%,transparent 100%) 0 50% / calc(var(--c-s)) calc(var(--c-s)) no-repeat;
+    --mask: radial-gradient(calc(var(--c-s) / 2) calc(var(--c-s) / 2) at 50% 50%,var(--bg) 98%,transparent 100%) 0 50% / var(--c-s) var(--c-s) no-repeat;
     -webkit-mask: var(--mask);
             mask: var(--mask);
   }
