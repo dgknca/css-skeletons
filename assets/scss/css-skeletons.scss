@@ -18,6 +18,8 @@
   box-sizing: content-box !important;
   --lin:linear-gradient(var(--bg), var(--bg));
 
+  // TODO: var(--bg) -> #000 for masks
+
   &::before,
   &::after {
     content: '';
@@ -58,18 +60,6 @@
     --mask: linear-gradient(var(--bg) 0 var(--l-h),transparent var(--l-h) calc(var(--l-h) + var(--l-gap))) 0 0/100% calc(var(--l-h) + var(--l-gap));
     -webkit-mask: var(--mask);
             mask: var(--mask);
-  }
-
-  &.rounded {
-    &::before,
-    &::after {
-      --mask: 
-      linear-gradient(var(--bg) 0 var(--l-h),transparent var(--l-h) calc(var(--l-h) + var(--l-gap))) calc(var(--l-h) / 2) 0/calc(100% - var(--l-h)) calc(var(--l-h) + var(--l-gap)) no-repeat repeat,
-      radial-gradient(calc(var(--l-h) / 2) calc(var(--l-h) / 2) at 50% 50%,var(--bg) 98%,transparent 100%) 0 0% / calc(var(--l-h)) calc(var(--l-h))  no-repeat repeat,
-      radial-gradient(calc(var(--l-h) / 2) calc(var(--l-h) / 2) at 50% 50%,var(--bg) 98%,transparent 100%) 100% 0% / calc(var(--l-h)) calc(var(--l-h))  no-repeat repeat;
-      -webkit-mask: var(--mask);
-              mask: var(--mask);
-    }
   }
 }
 
