@@ -61,6 +61,18 @@
   }
 }
 
+.skeleton.circle {
+  width: var(--c-s);
+  height: var(--c-s);
+
+  &::before,
+  &::after {
+    --mask: radial-gradient(calc(var(--c-s) / 2) calc(var(--c-s) / 2) at 50% 50%,var(--bg) 98%,transparent 100%) 0 50% / calc(var(--c-s)) calc(var(--c-s)) no-repeat;
+    -webkit-mask: var(--mask);
+            mask: var(--mask);
+  }
+}
+
 .skeleton.circle-line {
   height: var(--c-s);
 
@@ -147,6 +159,31 @@
             var(--lin) calc(var(--o-l) * 7) 100% / var(--col-w) calc((var(--chart-h) / 10) * 9),
             var(--lin) calc(var(--o-l) * 8) 100% / var(--col-w) calc((var(--chart-h) / 10) * 2),
             var(--lin) calc(var(--o-l) * 9) 100% / var(--col-w) calc((var(--chart-h) / 10) * 7);
+    -webkit-mask: var(--mask);
+            mask: var(--mask);
+    -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+  }
+}
+
+.skeleton.skeleton-card-1 {
+  --card-h:150px;
+  --g-gap: 30px;
+  --c-s: 30px;
+  height: var(--card-h);
+  --r-x:calc((var(--c-w) / 4) + var(--g-gap));
+  --l-x:calc((var(--c-w) / 4) + var(--g-gap) + var(--c-s) + var(--l-gap));
+  --l-w: calc((var(--c-w) - (var(--c-w) / 4 + (var(--g-gap) * 2) + (var(--l-gap) * 2) + var(--c-s) * 2)) / 2);
+  &::before,
+  &::after {
+    --mask: var(--lin) 0 0 / calc(var(--c-w) / 4) var(--card-h),
+            var(--lin) calc((var(--c-w) / 4) + var(--g-gap)) 0 / calc(var(--c-w) - ((var(--c-w) / 4) + var(--g-gap))) calc(var(--card-h) / 5),
+            var(--lin) calc((var(--c-w) / 4) + var(--g-gap)) calc(var(--card-h) / 3) / calc(var(--c-w) - ((var(--c-w) / 4) + var(--g-gap))) calc(var(--card-h) / 8),
+            var(--lin) calc((var(--c-w) / 4) + var(--g-gap)) calc(var(--card-h) / 1.8) / calc(var(--c-w) - ((var(--c-w) / 4) + var(--g-gap))) calc(var(--card-h) / 8),
+            radial-gradient(calc(var(--c-s) / 2) calc(var(--c-s) / 2) at 50% 50%,var(--bg) 98%,transparent 100%) var(--r-x) 100% / calc(var(--c-s)) calc(var(--c-s)),
+            var(--lin) left var(--l-x) bottom calc((var(--c-s) - (var(--card-h) / 8)) / 2) / var(--l-w) calc(var(--card-h) / 8),
+            radial-gradient(calc(var(--c-s) / 2) calc(var(--c-s) / 2) at 50% 50%,var(--bg) 98%,transparent 100%) calc(var(--l-x) + var(--l-w) + var(--g-gap)) 100% / calc(var(--c-s)) calc(var(--c-s)),
+            var(--lin) left calc(var(--l-x) + var(--l-w) + var(--c-s) + var(--g-gap) + var(--l-gap)) bottom calc((var(--c-s) - (var(--card-h) / 8)) / 2) / var(--l-w) calc(var(--card-h) / 8);
     -webkit-mask: var(--mask);
             mask: var(--mask);
     -webkit-mask-repeat: no-repeat;

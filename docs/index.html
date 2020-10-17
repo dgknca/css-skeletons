@@ -180,6 +180,20 @@
             <h2 id="circle">Circle</h2>
 
             <div class="properties">
+                <span class="class">.circle</span>
+                <span class="prop">--c-s (circle-size. Default 40px)</span>
+            </div>
+
+            <p class="description">Simple circle.</p>
+
+            <div class="box">
+<pre><code class="code">&lt;div class="skeleton circle" style="--c-s: 60px;">&lt;/div></code></pre>
+                <div class="result">
+                    <div class="skeleton circle" style="--c-s: 60px;"></div>
+                </div>
+            </div>
+
+            <div class="properties">
                 <span class="class">.circle-line</span>
                 <span class="prop">Default</span>
             </div>
@@ -265,6 +279,8 @@
                 <span class="prop">--chart-h (Height of the chart. Default 200px)</span>
             </div>
 
+            <p class="description">You don't have to set --c-w (container-width). The width will be calculated automatically based on the number of columns count and size of columns gap.</p>
+
             <div class="box">
 <pre><code class="code">&lt;div class="skeleton chart-columns">&lt;/div></code></pre>
                 <div class="result">
@@ -274,12 +290,37 @@
 
             <div class="box">
                 <pre><code class="code">&lt;div class="skeleton chart-columns" style="--cols: 10;--col-w:50px;--col-gap:30px;--chart-h:300px;">&lt;/div></code></pre>
-                    <div class="result">
-                        <div class="skeleton chart-columns" style="--cols: 10;--col-w:50px;--col-gap:30px;--chart-h:300px;"></div>
-                    </div>
+                <div class="result">
+                    <div class="skeleton chart-columns" style="--cols: 10;--col-w:50px;--col-gap:30px;--chart-h:300px;"></div>
                 </div>
+            </div>
         </section>
-            
+
+        <section class="section">
+            <h2 id="card">Cards</h2>
+            <div class="properties">
+                <span class="class">.skeleton-card-1</span>
+                <span class="prop">--card-h (Height of the card. Default 150px)</span>
+                <span class="prop">--g-gap (Group gap. Between big rectangle and others. Default 30px)</span>
+                <span class="prop">--c-s (Circle size. Default 30px)</span>
+            </div>
+
+            <p class="description">Sizes of the three lines and the big rectangle will be calculated automatically based on the container width (--c-w).</p>
+
+            <div class="box">
+<pre><code class="code">&lt;div class="skeleton skeleton-card-1" style="--c-w: 600px;">&lt;/div></code></pre>
+                <div class="result">
+                    <div class="skeleton skeleton-card-1" style="--c-w: 600px;"></div>
+                </div>
+            </div>
+
+            <div class="box">
+                <pre><code class="code">&lt;div class="skeleton skeleton-card-1" style="--c-w: 1200px;--card-h: 300px;--c-s: 50px;--l-gap:20px;--g-gap: 60px;">&lt;/div></code></pre>
+                <div class="result">
+                    <div class="skeleton skeleton-card-1" style="--c-w: 1200px;--card-h:300px;--c-s: 50px;--l-gap:20px;--g-gap: 60px;"></div>
+                </div>
+            </div>
+        </section>
     </div>
 
 
