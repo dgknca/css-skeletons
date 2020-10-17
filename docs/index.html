@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/highlight.min.css">
+    <link rel="stylesheet" href="./assets/css/atom-one-dark.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/css-skeletons.css">
+    <title>Single Div CSS Skeletons</title>
+</head>
+<body>
+    <div class="container">
+        <section class="section">
+            <h3>All Parameters</h3>
+            <div class="box">
+<pre><code class="code">.skeleton {
+    --t: 2s; /* animation duration */
+    --bg: #f0f0f0; /* background of shapes */
+    --c-bg: transparent; /* container-background */
+    --shine: #ecebeb; /* shine animation color */
+    --c-p: 10px; /* container-padding */
+    --c-w: 300px; /* container-width */
+    --lines: 1; /* count of lines */
+    --l-h: 20px; /* line-height */
+    --l-gap: 10px; /* gap between lines */
+    --g-gap: 15px; /* gap between groups. like circle and other lines */
+    --c-s: 40px; /* circle-size */
+    --rect-h: 80px; /* rectangle-height */
+}</code></pre>
+            </div>
+
+        </section>
+        <section class="section">
+            <h2 id="lines">Line</h2>
+
+            <div class="properties">
+                <span class="class">.line</span>
+                <span class="prop">Default</span>
+            </div>
+
+            <div class="box">
+<pre><code class="code">&lt;div class="skeleton line">&lt;/div></code></pre>
+                <div class="result">
+                    <div class="skeleton line"></div>
+                </div>
+            </div>
+
+            <div class="properties">
+                <span class="prop">--l-h (line-height)</span>
+            </div>
+            <p class="description">
+                If you want to change the default values, just send it in style="".
+            </p>
+            <div class="box">
+<pre><code class="code">&lt;div class="skeleton line" style="--l-h:40px;">&lt;/div></code></pre>
+                <div class="result">
+                    <div class="skeleton line" style="--l-h:40px;"></div>
+                </div>
+            </div>
+
+            <div class="properties">
+                <span class="prop">--lines</span>
+            </div>
+            <p class="description">No height needed. The height will be calculated automatically based on the number of lines and other default values.</p>
+            <div class="box">
+<pre><code class="code">&lt;div class="skeleton line" style="--lines:3">&lt;/div></code></pre>
+                <div class="result">
+                    <div class="skeleton line" style="--lines:3"></div>
+                </div>
+            </div>
+
+            <div class="properties">
+                <span class="prop">--l-gap (lines-gap)</span>
+            </div>
+            <div class="box">
+<pre><code class="code">&lt;div class="skeleton line" style="--lines:3;--l-gap:20px;">&lt;/div></code></pre>
+                <div class="result">
+                    <div class="skeleton line" style="--lines:3;--l-gap:20px;"></div>
+                </div>
+            </div>
+
+            <div class="properties">
+                <span class="prop">--c-bg (container-background)</span>
+            </div>
+            <div class="box">
+<pre><code class="code">&lt;div class="skeleton line" style="--lines:3;--c-bg: #F8F7FC;">&lt;/div></code></pre>
+                <div class="result">
+                    <div class="skeleton line" style="--lines:3;--c-bg: #F8F7FC;"></div>
+                </div>
+            </div>
+
+            <div class="properties">
+                <span class="prop">--bg (shape-background)</span>
+            </div>
+            <div class="box">
+<pre><code class="code">&lt;div class="skeleton line" style="--lines:3;--c-bg:#faecf6;--bg:#eeb6e0;">&lt;/div></code></pre>
+                <div class="result">
+                    <div class="skeleton line" style="--lines:3;--c-bg:#faecf6;--bg:#eeb6e0;"></div>
+                </div>
+            </div>
+
+            <div class="properties">
+                <span class="prop">--shine (shine-color)</span>
+            </div>
+            <div class="box">
+<pre><code class="code">&lt;div class="skeleton line" style="--lines:3;--c-bg:#faecf6;--bg:#eeb6e0;--shine:#f5c3da;">&lt;/div></code></pre>
+                <div class="result">
+                    <div class="skeleton line" style="--lines:3;--c-bg:#faecf6;--bg:#eeb6e0;--shine:#f5c3da;"></div>
+                </div>
+            </div>
+
+
+            <p class="description">Are custom properties too long? You can store them in a class.</p>
+            <div class="box">
+<pre><code class="code">&lt;style>
+.my-class {
+    --lines: 3;
+    --c-bg: #faecf6;
+    --bg: #eeb6e0;
+    --shine: #f5c3da;
+}
+&lt;/style>
+
+&lt;div class="skeleton line my-class">&lt;/div></code></pre>
+            <div class="result">
+                    <style>
+                    .my-class {
+                        --lines: 3;
+                        --c-bg: #faecf6;
+                        --bg: #eeb6e0;
+                        --shine: #f5c3da;
+                    }
+                    </style>
+                    <div class="skeleton line my-class"></div>
+                </div>
+            </div>
+
+            <div class="properties">
+                <span class="prop">--c-p (container-padding)</span>
+            </div>
+            <p class="description"></p>
+            <div class="box">
+<pre><code class="code">&lt;div class="skeleton line" style="--lines:3;--c-bg: #F8F7FC;--c-p: 30px;">&lt;/div></code></pre>
+                <div class="result">
+                    <div class="skeleton line" style="--lines:3;--c-bg: #F8F7FC;--c-p: 30px;"></div>
+                </div>
+            </div>
+
+            <div class="properties">
+                <span class="class">.rect</span>
+                <span class="prop">--rect-h (rectangle-height)</span>
+            </div>
+            <p class="description">We can add another big rectangle.</p>
+            <div class="box">
+<pre><code class="code">&lt;div class="skeleton rect" style="--rect-h:150px;--lines:3;">&lt;/div></code></pre>
+                <div class="result">
+                    <div class="skeleton rect" style="--rect-h:150px;--lines:3;"></div>
+                </div>
+            </div>
+
+            
+
+            <div class="properties">
+                <span class="prop">--g-gap (group-gap)</span>
+            </div>
+
+            <p class="description">Gap between groups. e.g. rect and other lines or circle and other lines.</p>
+
+            <div class="box">
+<pre><code class="code">&lt;div class="skeleton rect" style="--lines:3;--rect-h:150px;--g-gap:30px;">&lt;/div></code></pre>
+                <div class="result">
+                    <div class="skeleton rect" style="--lines:3;--rect-h:150px;--g-gap:30px;"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 id="circle">Circle</h2>
+
+            <div class="properties">
+                <span class="class">.circle-line</span>
+                <span class="prop">Default</span>
+            </div>
+
+            <p class="description">Side by side circle and line.</p>
+
+            <div class="box">
+<pre><code class="code">&lt;div class="skeleton circle-line">&lt;/div></code></pre>
+                <div class="result">
+                    <div class="skeleton circle-line"></div>
+                </div>
+            </div>
+
+            <div class="properties">
+                <span class="prop">--c-s (circle-size)</span>
+            </div>
+
+            <div class="box">
+<pre><code class="code">&lt;div class="skeleton circle-line" style="--c-s:60px">&lt;/div></code></pre>
+                <div class="result">
+                    <div class="skeleton circle-line" style="--c-s:60px"></div>
+                </div>
+            </div>
+
+            <div class="properties">
+                <span class="class">.circle-multi-line</span>
+            </div>
+
+            <p class="description">If you want to use multiple lines, you should use "circle-multi-line" class.</p>
+
+            <div class="box">
+<pre><code class="code">&lt;div class="skeleton circle-multi-line" style="--c-s:80px;--lines:4;">&lt;/div></code></pre>
+                <div class="result">
+                    <div class="skeleton circle-multi-line" style="--c-s:80px;--lines:4;"></div>
+                </div>
+            </div>
+
+            <div class="properties">
+                <span class="class">.adapt-to-circle</span>
+            </div>
+
+            <p class="description">Just set --c-s (circle-size). The lines will be produced and placed automatically based on the size of the circle.</p>
+
+            <div class="box">
+<pre><code class="code">&lt;div class="skeleton circle-multi-line adapt-to-circle" style="--c-s:150px;">&lt;/div></code></pre>
+                <div class="result">
+                    <div class="skeleton circle-multi-line adapt-to-circle" style="--c-s:150px;"></div>
+                </div>
+            </div>
+        </section>
+
+            
+    </div>
+
+
+    <script src="./assets/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

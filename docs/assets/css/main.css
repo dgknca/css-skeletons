@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Noto+Sans:wght@400;700&display=swap');
+
+html {
+    font-family: 'Noto Sans', monospace;
+}
+
+body {
+    background: #f5f6fa;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .1);
+}
+
+.section {
+    margin-top: 50px;
+}
+
+.description {
+    font-size: 18px;
+    margin-top: 20px;
+    line-height: 2;
+}
+
+.box {
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, .2));
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.code {
+    font-family: 'Fira Code', monospace;
+    padding: 20px;
+    line-height: 1.4;
+    border-radius: 20px 20px 0 0;
+}
+
+.result {
+    padding: 20px;
+    background: #fff;
+    border-radius: 0 0 20px 20px;
+}
+
+.properties {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 40px;
+}
+
+.class {
+    color: #400c21;
+    background: #ffbcf7;
+    padding: 5px;
+    font-family: 'Fira Code', monospace;
+    letter-spacing: -0.5px;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.prop {
+    display: block;
+    color: #0324ab;
+    background: #edf0fc;
+    padding: 5px;
+    font-family: 'Fira Code', monospace;
+    letter-spacing: -0.5px;
+    font-size: 16px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.hljs-attribute,
+.hljs-doctag,
+.hljs-keyword,
+.hljs-meta-keyword,
+.hljs-name,
+.hljs-selector-tag {
+    font-weight: 400;
+}
+
+.hljs-name,
+.hljs-selector-class {
+    color: hsl(338, 85%, 74%);
+}
+
+.hljs-attr,
+.hljs-attribute {
+    color: hsl(39, 100%, 95%);
+}
+
+.hljs-string,
+.hljs-number {
+    color: hsl(44, 74%, 68%);
+}
