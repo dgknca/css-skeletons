@@ -16,6 +16,7 @@
   position: relative;
   background: var(--c-bg);
   box-sizing: content-box !important;
+  --lin:linear-gradient(var(--bg), var(--bg));
 
   &::before,
   &::after {
@@ -32,11 +33,10 @@
   }
 
   &::after {
-    background: linear-gradient(to right, transparent 0 20%, var(--shine), transparent 80% 100%) -300% 0/80% 100%;
-    background-repeat: no-repeat;
-    animation: skeleton var(--t) linear infinite;
+    background: linear-gradient(to right, transparent 0 20%, var(--shine), transparent 80% 100%) -300% 0/80% 100%  no-repeat;
+    animation: s var(--t) linear infinite;
 
-    @keyframes skeleton {
+    @keyframes s {
       to {
         background-position: 600% 0;
       }
@@ -67,7 +67,7 @@
   &::before,
   &::after {
     --mask: radial-gradient(calc(var(--c-s) / 2) calc(var(--c-s) / 2) at 50% 50%,var(--bg) 98%,transparent 100%) 0 50% / calc(var(--c-s)) calc(var(--c-s)),
-            linear-gradient(var(--bg), var(--bg)) calc(var(--c-s) + var(--g-gap)) 50%/100% var(--l-h);
+            var(--lin) calc(var(--c-s) + var(--g-gap)) 50%/100% var(--l-h);
     -webkit-mask: var(--mask);
     mask: var(--mask);
     -webkit-mask-repeat: no-repeat;
@@ -102,9 +102,54 @@
 
   &::before,
   &::after {
-    --mask: linear-gradient(var(--bg), var(--bg)) 0 0/100% var(--rect-h) no-repeat, 
+    --mask: var(--lin) 0 0/100% var(--rect-h) no-repeat, 
             repeating-linear-gradient(var(--bg) 0 var(--l-h), transparent var(--l-h) calc(var(--l-h) + var(--l-gap))) 0 calc(var(--rect-h) + var(--g-gap)) / 100% calc(100% - (var(--rect-h) + var(--g-gap))) no-repeat;
     -webkit-mask: var(--mask);
             mask: var(--mask);
+  }
+}
+
+.skeleton.chart-area {
+  --chart-bottom: 40px;
+  --chart-h: 200px;
+  height: var(--chart-h);
+  
+  &::before,
+  &::after {
+    --mask: var(--lin) 0 100% / 100% var(--chart-bottom) no-repeat,
+            linear-gradient(to left bottom,transparent 0 49.5%, var(--bg) 50% 100%) left 0 bottom var(--chart-bottom) / calc((var(--c-w) / 10) * 2) calc(var(--chart-h) / 2) no-repeat,
+            linear-gradient(to right bottom,transparent 0 49.5%, var(--bg) 50% 100%) left calc((var(--c-w) / 10) * 2) bottom var(--chart-bottom) / calc((var(--c-w) / 10) * 3) calc(var(--chart-h) - var(--chart-bottom)) no-repeat,
+            linear-gradient(to left bottom,transparent 0 49.5%, var(--bg) 50% 100%) left calc((var(--c-w) / 10) * 5) bottom var(--chart-bottom) / calc((var(--c-w) / 10) * 3) calc(var(--chart-h) - var(--chart-bottom)) no-repeat,
+            linear-gradient(to right bottom,transparent 0 49.5%, var(--bg) 50% 100%) left calc((var(--c-w) / 10) * 8) bottom var(--chart-bottom) / calc((var(--c-w) / 10) * 2.5) calc(var(--chart-h) / 2.5) no-repeat;
+    -webkit-mask: var(--mask);
+            mask: var(--mask);
+  }
+}
+
+.skeleton.chart-columns {
+  --cols: 5;
+  --col-w: 25px;
+  --col-gap: 25px;
+  --o-l: calc(var(--col-w) + var(--col-gap)); // offset-left
+  --chart-h: 200px;
+  height: var(--chart-h);
+  width: calc(((var(--cols) - 1) * var(--o-l)) + var(--col-w));
+  
+  &::before,
+  &::after {
+    --mask: var(--lin) 0 100% / var(--col-w) calc((var(--chart-h) / 10) * 4),
+            var(--lin) calc(var(--o-l)) 100% / var(--col-w) calc((var(--chart-h) / 10) * 3),
+            var(--lin) calc(var(--o-l) * 2) 100% / var(--col-w) calc((var(--chart-h) / 10) * 6),
+            var(--lin) calc(var(--o-l) * 3) 100% / var(--col-w) calc((var(--chart-h) / 10) * 8),
+            var(--lin) calc(var(--o-l) * 4) 100% / var(--col-w) calc((var(--chart-h) / 10) * 2),
+            var(--lin) calc(var(--o-l) * 5) 100% / var(--col-w) calc((var(--chart-h) / 10) * 5),
+            var(--lin) calc(var(--o-l) * 6) 100% / var(--col-w) calc((var(--chart-h) / 10) * 4),
+            var(--lin) calc(var(--o-l) * 7) 100% / var(--col-w) calc((var(--chart-h) / 10) * 9),
+            var(--lin) calc(var(--o-l) * 8) 100% / var(--col-w) calc((var(--chart-h) / 10) * 2),
+            var(--lin) calc(var(--o-l) * 9) 100% / var(--col-w) calc((var(--chart-h) / 10) * 7);
+    -webkit-mask: var(--mask);
+            mask: var(--mask);
+    -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
   }
 }

@@ -152,7 +152,7 @@
                 <span class="class">.rect</span>
                 <span class="prop">--rect-h (rectangle-height)</span>
             </div>
-            <p class="description">We can add another big rectangle.</p>
+            <p class="description">We can add another big rectangle with rect class.</p>
             <div class="box">
 <pre><code class="code">&lt;div class="skeleton rect" style="--rect-h:150px;--lines:3;">&lt;/div></code></pre>
                 <div class="result">
@@ -231,6 +231,54 @@
             </div>
         </section>
 
+        <section class="section">
+            <h2 id="chart">Charts</h2>
+
+            <div class="properties">
+                <span class="class">.chart-area</span>
+                <span class="prop">--chart-h (chart-height. Default 200px)</span>
+            </div>
+
+            <div class="box">
+<pre><code class="code">&lt;div class="skeleton chart-area" style="--c-w: 500px;">&lt;/div></code></pre>
+                <div class="result">
+                    <div class="skeleton chart-area" style="--c-w: 500px;"></div>
+                </div>
+            </div>
+
+            <div class="properties">
+                <span class="prop">--chart-bottom (height of the bottom area of ​​the chart. Default 40px)</span>
+            </div>
+
+            <div class="box">
+<pre><code class="code">&lt;div class="skeleton chart-area" style="--c-w: 800px;--chart-h: 300px;--chart-bottom:80px;">&lt;/div></code></pre>
+                <div class="result">
+                    <div class="skeleton chart-area" style="--c-w: 800px;--chart-h: 300px;--chart-bottom:80px;"></div>
+                </div>
+            </div>
+
+            <div class="properties">
+                <span class="class">.chart-columns</span>
+                <span class="prop">--cols (Count of columns. Default 5, max 10)</span>
+                <span class="prop">--col-w (Column width. Default 25px)</span>
+                <span class="prop">--col-gap (Gap between columns. Default 25px)</span>
+                <span class="prop">--chart-h (Height of the chart. Default 200px)</span>
+            </div>
+
+            <div class="box">
+<pre><code class="code">&lt;div class="skeleton chart-columns">&lt;/div></code></pre>
+                <div class="result">
+                    <div class="skeleton chart-columns"></div>
+                </div>
+            </div>
+
+            <div class="box">
+                <pre><code class="code">&lt;div class="skeleton chart-columns" style="--cols: 10;--col-w:50px;--col-gap:30px;--chart-h:300px;">&lt;/div></code></pre>
+                    <div class="result">
+                        <div class="skeleton chart-columns" style="--cols: 10;--col-w:50px;--col-gap:30px;--chart-h:300px;"></div>
+                    </div>
+                </div>
+        </section>
             
     </div>
 
