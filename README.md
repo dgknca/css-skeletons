@@ -1,7 +1,9 @@
-## Install
+## Installation
 
-```
-<link rel="stylesheet" href="https://unpkg.com/css-skeletons@latest/css/css-skeletons.min.css">
+You can use the css-skeletons from CDN.
+
+```html
+<link rel="stylesheet" href="https://unpkg.com/css-skeletons" />
 ```
 
 ## Custom Variables
