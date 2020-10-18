@@ -1,6 +1,18 @@
-## Installation
+## Getting Started
 
-You can use the css-skeletons from CDN.
+### Install from NPM
+
+```js
+npm i css-skeletons
+```
+
+```js
+import 'css-skeletons'
+```
+
+or
+
+### Use from CDN
 
 ```html
 <link rel="stylesheet" href="https://unpkg.com/css-skeletons" />
