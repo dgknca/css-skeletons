@@ -6,10 +6,10 @@ var rename = require('gulp-rename')
 const cleanCSS = require('gulp-clean-css');
 
 var path = {
-  scss: { source: './scss/css-skeletons.scss', target: './css' }
+  scss: { source: './css/css-skeletons.scss', target: './css' }
 }
 
-var listen = './scss/**/**.scss'
+var listen = './css/**/**.scss'
 
 gulp.task('scss', function() {
   gulp
@@ -17,6 +17,8 @@ gulp.task('scss', function() {
     .pipe(plumber())
     // .pipe(prefix())
     .pipe(sass())
+    .pipe(rename({ extname: '.css' }))
+    .pipe(gulp.dest(path.scss.target))
     .pipe(cleanCSS({compatibility: 'ie8'}))
     .pipe(rename({ extname: '.min.css' }))
     .pipe(gulp.dest(path.scss.target))

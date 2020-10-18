@@ -1,4 +1,10 @@
-## Variables
+## Install
+
+```
+<link rel="stylesheet" href="https://unpkg.com/css-skeletons@latest/css/css-skeletons.min.css">
+```
+
+## Custom Variables
 
 | Custom Variable | Description                                                             |   Default   |
 | :-------------- | :---------------------------------------------------------------------- | :---------: |
