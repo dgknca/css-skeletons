@@ -123,17 +123,17 @@
   }
 
   &#{$s}-chart-area {
-    --chart-bottom: 40px;
+    --chart-btm: 40px;
     --chart-h: 200px;
     height: var(--chart-h);
     
     &::before,
     &::after {
-      --mask: var(--lin) 0 100% / 100% var(--chart-bottom) no-repeat,
-              linear-gradient(to left bottom,transparent 0 49.5%, #000 50% 100%) left 0 bottom var(--chart-bottom) / calc((var(--c-w) / 10) * 2) calc(var(--chart-h) / 2) no-repeat,
-              linear-gradient(to right bottom,transparent 0 49.5%, #000 50% 100%) left calc((var(--c-w) / 10) * 2) bottom var(--chart-bottom) / calc((var(--c-w) / 10) * 3) calc(var(--chart-h) - var(--chart-bottom)) no-repeat,
-              linear-gradient(to left bottom,transparent 0 49.5%, #000 50% 100%) left calc((var(--c-w) / 10) * 5) bottom var(--chart-bottom) / calc((var(--c-w) / 10) * 3) calc(var(--chart-h) - var(--chart-bottom)) no-repeat,
-              linear-gradient(to right bottom,transparent 0 49.5%, #000 50% 100%) left calc((var(--c-w) / 10) * 8) bottom var(--chart-bottom) / calc((var(--c-w) / 10) * 2.5) calc(var(--chart-h) / 2.5) no-repeat;
+      --mask: var(--lin) 0 100% / 100% var(--chart-btm) no-repeat,
+              linear-gradient(to left bottom,transparent 0 49.5%, #000 50% 100%) left 0 bottom var(--chart-btm) / calc((var(--c-w) / 10) * 2) calc(var(--chart-h) / 2) no-repeat,
+              linear-gradient(to right bottom,transparent 0 49.5%, #000 50% 100%) left calc((var(--c-w) / 10) * 2) bottom var(--chart-btm) / calc((var(--c-w) / 10) * 3) calc(var(--chart-h) - var(--chart-btm)) no-repeat,
+              linear-gradient(to left bottom,transparent 0 49.5%, #000 50% 100%) left calc((var(--c-w) / 10) * 5) bottom var(--chart-btm) / calc((var(--c-w) / 10) * 3) calc(var(--chart-h) - var(--chart-btm)) no-repeat,
+              linear-gradient(to right bottom,transparent 0 49.5%, #000 50% 100%) left calc((var(--c-w) / 10) * 8) bottom var(--chart-btm) / calc((var(--c-w) / 10) * 2.5) calc(var(--chart-h) / 2.5) no-repeat;
       -webkit-mask: var(--mask);
               mask: var(--mask);
     }
