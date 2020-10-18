@@ -1,0 +1,6 @@
+# Build files
+node_modules
+
+# Documentation files
+docs
+index.html
