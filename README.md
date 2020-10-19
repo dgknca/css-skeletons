@@ -1,3 +1,5 @@
+# A single div, dynamic, fully customizable CSS library.
+
 ## Getting Started
 
 ### Install from NPM
