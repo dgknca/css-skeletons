@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Noto+Sans:wght@400;700&display=swap');
 
 html {
-    font-family: 'Noto Sans', monospace;
+    font-family: 'Noto Sans', sans-serif;
 }
 
 body {
@@ -12,8 +12,33 @@ body {
     box-sizing: border-box;
 }
 
+h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-top: 1.8rem;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 1.75rem;
+    margin: 30px 0 20px 0;
+    font-weight: 700;
+    border-bottom: 1px solid #eaecef;
+    padding-bottom: 10px;
+}
+
+h4 {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+a, a:visited {
+    color: royalblue;
+    text-decoration: none;
+}
+
 .container {
-    max-width: 1400px;
+    max-width: 1000px;
     width: 100%;
     margin: 0 auto;
     padding: 20px;
@@ -44,6 +69,38 @@ body {
     border-radius: 20px 20px 0 0;
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+}
+ 
+::-webkit-scrollbar-track {
+    background: #e0e0e0;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.code::-webkit-scrollbar {
+    height: 10px;
+}
+  
+.code::-webkit-scrollbar-track {
+background: #e0e0e0;
+}
+
+.code::-webkit-scrollbar-thumb {
+background: #888;
+}
+
+.code::-webkit-scrollbar-thumb:hover {
+background: #555;
+}
+
 .result {
     padding: 20px;
     background: #fff;
@@ -67,11 +124,7 @@ body {
     font-size: 18px;
 }
 
-.prop {
-    display: block;
-    color: #0324ab;
-    background: #edf0fc;
-    padding: 5px;
+.prop-wrp {
     font-family: 'Fira Code', monospace;
     letter-spacing: -0.5px;
     font-size: 16px;
@@ -79,16 +132,27 @@ body {
     margin-top: 10px;
 }
 
-h2 {
-    font-size: 2.5rem;
+.prop {
+    display: inline-block;
+    color: #0324ab;
+    background: #edf0fc;
+    padding: 5px;
+}
+
+.class:target,
+.prop:target {
+    background: yellow;
+    color: #000;
     font-weight: 700;
+    letter-spacing: 0;
 }
 
-h3 {
-    font-size: 1.5rem;
-    font-weight: 400;
+.prop.inline {
+    display: inline;
+    margin: 0;
+    font-family: 'Fira Code', monospace;
+    font-size: 16px;
 }
-
 .hljs-attribute,
 .hljs-doctag,
 .hljs-keyword,
@@ -113,4 +177,24 @@ h3 {
     color: hsl(44, 74%, 68%);
 }
 
+table {
+}
 
+table th {
+    text-align: left;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+table tr:nth-child(2n) {
+    background-color: #f6f8fa;
+}
+
+table td, table th{
+    padding: 8px 15px;
+    border:1px solid #dfe2e5;
+    border-collapse: collapse;
+    font-size: 16px;
+    line-height: 1.5;
+    color:#24292e;
+}

@@ -1,204 +1,377 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/reset.css">
-    <link rel="stylesheet" href="./assets/css/highlight.min.css">
-    <link rel="stylesheet" href="./assets/css/atom-one-dark.css">
-    <link rel="stylesheet" href="./assets/css/main.css">
-    <link rel="stylesheet" href="../css/css-skeletons.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/highlight.min.css" />
+    <link rel="stylesheet" href="./assets/css/atom-one-dark.css" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="../css/css-skeletons.min.css" />
     <title>Single Div CSS Skeletons</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <section class="section">
+      <h1>css-skeletons</h1>
+      <h2>A single &lt;div>, dynamic, fully customizable CSS library.</h2>
+      <section class="section">
+        <h3>Custom Variables</h3>
+        <table class="variables-table">
+          <thead>
+            <tr>
+              <th>Custom Variable</th>
+              <th>Description</th>
+              <th>Default</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a href="#--lines">--lines</a></td>
+              <td>Count of the lines.</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td><a href="#--l-h">--l-h</a></td>
+              <td>(line-height) Height of the lines.</td>
+              <td>20px</td>
+            </tr>
+            <tr>
+              <td><a href="#--l-gap">--l-gap</a></td>
+              <td>(line-gap) Gap between the lines.</td>
+              <td>10px</td>
+            </tr>
+            <tr>
+              <td><a href="#--g-gap">--g-gap</a></td>
+              <td>
+                (group-gap) Gap between the groups. E.g. circle and other lines.
+              </td>
+              <td>15px</td>
+            </tr>
+            <tr>
+              <td><a href="#--c-w">--c-w</a></td>
+              <td>(container-width) Width of the container.</td>
+              <td>300px</td>
+            </tr>
+            <tr>
+              <td><a href="#--c-p">--c-p</a></td>
+              <td>(container-padding) Padding of the container.</td>
+              <td>10px</td>
+            </tr>
+            <tr>
+              <td><a href="#--b-w">--b-w</a></td>
+              <td>border-width for container.</td>
+              <td>0px</td>
+            </tr>
+            <tr>
+              <td><a href="#--b-c">--b-c</a></td>
+              <td>border-color for container.</td>
+              <td>#e2e1eb</td>
+            </tr>
+            <tr>
+              <td><a href="#--bdrs">--bdrs</a></td>
+              <td>border-radius for container.</td>
+              <td>0px</td>
+            </tr>
+            <tr>
+              <td><a href="#--c-bg">--c-bg</a></td>
+              <td>(container-background) Background of the container.</td>
+              <td>transparent</td>
+            </tr>
+            <tr>
+              <td><a href="#--bg">--bg</a></td>
+              <td>Background of the shapes.</td>
+              <td>#e2e1eb</td>
+            </tr>
+            <tr>
+              <td><a href="#--c-s">--c-s</a></td>
+              <td>(circle-size) Size of the circles.</td>
+              <td>40px</td>
+            </tr>
+            <tr>
+              <td><a href="#--rect-h">--rect-h</a></td>
+              <td>(rectangle-height) Height of the rectangle at the top.</td>
+              <td>80px</td>
+            </tr>
+            <tr>
+              <td><a href="#--chart-h">--chart-h</a></td>
+              <td>(chart-height) Height of the chart.</td>
+              <td>200px</td>
+            </tr>
+            <tr>
+              <td><a href="#--chart-btm">--chart-btm</a></td>
+              <td>
+                (chart-bottom) Height of the bottom area of the
+                ".skeleton-chart-line".
+              </td>
+              <td>40px</td>
+            </tr>
+            <tr>
+              <td><a href="#--cols">--cols</a></td>
+              <td>
+                Columns count of the ".skeleton-chart-columns". Can be up to 10.
+              </td>
+              <td>5</td>
+            </tr>
+            <tr>
+              <td><a href="#--col-w">--col-w</a></td>
+              <td>Width of the columns.</td>
+              <td>25px</td>
+            </tr>
+            <tr>
+              <td><a href="#--col-gap">--col-gap</a></td>
+              <td>Gap between the columns.</td>
+              <td>25px</td>
+            </tr>
+            <tr>
+              <td><a href="#--card-h">--card-h</a></td>
+              <td>Height of the cards.</td>
+              <td>150px</td>
+            </tr>
+            <tr>
+              <td><a href="#--shine">--shine</a></td>
+              <td>Color of the shine animation.</td>
+              <td>#eaeaf1</td>
+            </tr>
+            <tr>
+              <td><a href="#--t">--t</a></td>
+              <td>Duration of the shine animation.</td>
+              <td>2s</td>
+            </tr>
+          </tbody>
+        </table>
 
-        <table>
-            <thead>
+        <h3>Classes</h3>
+        <table class="classes-table">
+          <thead>
             <tr>
-                <th align="left">Custom Variable</th>
-                <th align="left">Description</th>
-                <th align="center">Default</th>
+              <th style="width: 20%">Class</th>
+              <th style="width: 30%">Description</th>
+              <th style="width: 20%">Required</th>
+              <th style="width: 30%">Valid Variables</th>
             </tr>
-            </thead>
-            <tbody>
+          </thead>
+          <tbody>
             <tr>
-                <td align="left">--lines</td>
-                <td align="left">Count of the lines.</td>
-                <td align="center">1</td>
-            </tr>
-            <tr>
-                <td align="left">--l-h</td>
-                <td align="left">(line-height) Height of the lines.</td>
-                <td align="center">20px</td>
+              <td>VALID FOR ALL</td>
+              <td>Desc</td>
+              <td>-</td>
+              <td>--bg, --c-bg, --c-w, --c-p, --shine, --t</td>
             </tr>
             <tr>
-                <td align="left">--l-gap</td>
-                <td align="left">(line-gap) Gap between the lines.</td>
-                <td align="center">10px</td>
+              <td><a href="#.skeleton-line">.skeleton-line</a></td>
+              <td>Desc</td>
+              <td>-</td>
+              <td>--l-h, --lines, --l-gap</td>
             </tr>
             <tr>
-                <td align="left">--g-gap</td>
-                <td align="left">(group-gap) Gap between the groups. E.g. circle and other lines.</td>
-                <td align="center">15px</td>
+              <td><a href="#.skeleton-circle">.skeleton-circle</a></td>
+              <td>Desc</td>
+              <td>-</td>
+              <td>--c-s</td>
             </tr>
             <tr>
-                <td align="left">--c-w</td>
-                <td align="left">(container-width) Width of the container.</td>
-                <td align="center">300px</td>
+              <td>
+                <a href="#.skeleton-circle-line">.skeleton-circle-line</a>
+              </td>
+              <td>Desc</td>
+              <td>-</td>
+              <td>--c-s, --g-gap, --l-gap</td>
             </tr>
             <tr>
-                <td align="left">--c-p</td>
-                <td align="left">(container-padding) Padding of the container.</td>
-                <td align="center">10px</td>
+              <td>
+                <a href="#.skeleton-circle-multi-line"
+                  >.skeleton-circle-multi-line</a
+                >
+              </td>
+              <td>Desc</td>
+              <td>-</td>
+              <td>--c-s, --l-h, --lines, --l-gap, --g-gap</td>
             </tr>
             <tr>
-                <td align="left">--bg</td>
-                <td align="left">Background of the shapes.</td>
-                <td align="center">#e2e1eb</td>
+              <td><a href="#.adapt-to-circle">.adapt-to-circle</a></td>
+              <td>
+                No need to set --lines. Just need to set --c-s (circle-size).
+                The lines will be produced and placed automatically based on the
+                size of the circle.
+              </td>
+              <td>.skeleton-circle-multi-line</td>
+              <td>--c-s, --l-h, --lines, --l-gap, --g-gap</td>
             </tr>
             <tr>
-                <td align="left">--c-bg</td>
-                <td align="left">Background of the container.</td>
-                <td align="center">transparent</td>
+              <td><a href="#.skeleton-rect">.skeleton-rect</a></td>
+              <td>Desc</td>
+              <td>-</td>
+              <td>--rect-h, --l-h, --lines, --l-gap, --g-gap</td>
             </tr>
             <tr>
-                <td align="left">--shine</td>
-                <td align="left">Color of the shine animation.</td>
-                <td align="center">#eaeaf1</td>
+              <td>
+                <a href="#.skeleton-chart-columns">.skeleton-chart-columns</a>
+              </td>
+              <td>Desc</td>
+              <td>-</td>
+              <td>--cols, --col-w, --col-gap, --chart-h</td>
             </tr>
             <tr>
-                <td align="left">--t</td>
-                <td align="left">Duration of the shine animation.</td>
-                <td align="center">2s</td>
+              <td><a href="#.skeleton-chart-line">.skeleton-chart-line</a></td>
+              <td>Desc</td>
+              <td>-</td>
+              <td>--chart-btm, --chart-h</td>
             </tr>
             <tr>
-                <td align="left">--c-s</td>
-                <td align="left">(circle-size) Size of the circles.</td>
-                <td align="center">40px</td>
+              <td><a href="#.skeleton-card-1">.skeleton-card-1</a></td>
+              <td>Desc</td>
+              <td>-</td>
+              <td>--card-h, --g-gap, --c-s</td>
             </tr>
             <tr>
-                <td align="left">--rect-h</td>
-                <td align="left">(rectangle-height) Height of the rectangle at the top.</td>
-                <td align="center">80px</td>
+              <td>.no-animate</td>
+              <td>Cancels the animation.</td>
+              <td>-</td>
+              <td>-</td>
             </tr>
-            <tr>
-                <td align="left">--chart-h</td>
-                <td align="left">(chart-height) Height of the chart.</td>
-                <td align="center">200px</td>
-            </tr>
-            <tr>
-                <td align="left">--chart-btm</td>
-                <td align="left">(chart-bottom) Height of the bottom area of the ".skeleton-chart-area".</td>
-                <td align="center">40px</td>
-            </tr>
-            <tr>
-                <td align="left">--cols</td>
-                <td align="left">Columns count of the ".skeleton-chart-columns". Can be up to 10.</td>
-                <td align="center">5</td>
-            </tr>
-            <tr>
-                <td align="left">--col-w</td>
-                <td align="left">Width of the columns.</td>
-                <td align="center">25px</td>
-            </tr>
-            <tr>
-                <td align="left">--col-gap</td>
-                <td align="left">Gap between the columns.</td>
-                <td align="center">25px</td>
-            </tr>
-            <tr>
-                <td align="left">--card-h</td>
-                <td align="left">Height of the cards.</td>
-                <td align="center">150px</td>
-            </tr>
-            </tbody>
-            </table>
+          </tbody>
+        </table>
+      </section>
+      <section class="section">
+        <div class="properties">
+          <span class="class" id=".skeleton-line">.skeleton-line</span>
+        </div>
 
-        </section>
-        <section class="section">
-            <h2 id="lines">Line</h2>
+        <div class="box">
+          <pre><code class="code">&lt;div class="skeleton skeleton-line">&lt;/div></code></pre>
+          <div class="result">
+            <div class="skeleton skeleton-line"></div>
+          </div>
+        </div>
 
-            <div class="properties">
-                <span class="class">.line</span>
-            </div>
+        <div class="properties">
+          <div class="prop-wrp">
+            <span class="prop" id="--l-h">--l-h</span> (line-height)
+          </div>
+        </div>
+        <p class="description">
+          If you want to change the default values, just send it in style="".
+        </p>
+        <div class="box">
+          <pre><code class="code">&lt;div class="skeleton skeleton-line" style="--l-h:40px;">&lt;/div></code></pre>
+          <div class="result">
+            <div class="skeleton skeleton-line" style="--l-h: 40px"></div>
+          </div>
+        </div>
 
-            <div class="box">
-<pre><code class="code">&lt;div class="skeleton skeleton-line">&lt;/div></code></pre>
-                <div class="result">
-                    <div class="skeleton skeleton-line"></div>
-                </div>
-            </div>
+        <div class="properties">
+          <div class="prop-wrp">
+            <span class="prop" id="--lines">--lines</span>
+          </div>
+        </div>
+        <p class="description">
+          No height needed. The height will be calculated automatically based on
+          the number of lines and other default values.
+        </p>
+        <div class="box">
+          <pre><code class="code">&lt;div class="skeleton skeleton-line" style="--lines:3">&lt;/div></code></pre>
+          <div class="result">
+            <div class="skeleton skeleton-line" style="--lines: 3"></div>
+          </div>
+        </div>
 
-            <div class="properties">
-                <span class="prop">--l-h (line-height)</span>
-            </div>
-            <p class="description">
-                If you want to change the default values, just send it in style="".
-            </p>
-            <div class="box">
-<pre><code class="code">&lt;div class="skeleton skeleton-line" style="--l-h:40px;">&lt;/div></code></pre>
-                <div class="result">
-                    <div class="skeleton skeleton-line" style="--l-h:40px;"></div>
-                </div>
-            </div>
+        <div class="properties">
+          <div class="prop-wrp">
+            <span class="prop" id="--l-gap">--l-gap</span> (lines-gap)
+          </div>
+        </div>
+        <div class="box">
+          <pre><code class="code">&lt;div class="skeleton skeleton-line" style="--lines:3;--l-gap:20px;">&lt;/div></code></pre>
+          <div class="result">
+            <div
+              class="skeleton skeleton-line"
+              style="--lines: 3; --l-gap: 20px"
+            ></div>
+          </div>
+        </div>
 
-            <div class="properties">
-                <span class="prop">--lines</span>
-            </div>
-            <p class="description">No height needed. The height will be calculated automatically based on the number of lines and other default values.</p>
-            <div class="box">
-<pre><code class="code">&lt;div class="skeleton skeleton-line" style="--lines:3">&lt;/div></code></pre>
-                <div class="result">
-                    <div class="skeleton skeleton-line" style="--lines:3"></div>
-                </div>
-            </div>
+        <div class="properties">
+          <div class="prop-wrp">
+            <span class="prop" id="--c-bg">--c-bg</span> (container-background)
+          </div>
+        </div>
+        <div class="box">
+          <pre><code class="code">&lt;div class="skeleton skeleton-line" style="--lines:3;--c-bg: #F8F7FC;">&lt;/div></code></pre>
+          <div class="result">
+            <div
+              class="skeleton skeleton-line"
+              style="--lines: 3; --c-bg: #f8f7fc"
+            ></div>
+          </div>
+        </div>
 
-            <div class="properties">
-                <span class="prop">--l-gap (lines-gap)</span>
-            </div>
-            <div class="box">
-<pre><code class="code">&lt;div class="skeleton skeleton-line" style="--lines:3;--l-gap:20px;">&lt;/div></code></pre>
-                <div class="result">
-                    <div class="skeleton skeleton-line" style="--lines:3;--l-gap:20px;"></div>
-                </div>
-            </div>
+        <div class="properties">
+          <div class="prop-wrp">
+            <span class="prop" id="--b-w">--b-w</span> (border-width)
+          </div>
+          <div class="prop-wrp">
+            <span class="prop" id="--b-c">--b-c</span> (border-color)
+          </div>
+          <div class="prop-wrp">
+            <span class="prop" id="--bdrs">--bdrs</span> (border-radius)
+          </div>
+        </div>
+        <div class="box">
+          <pre><code class="code">&lt;div class="skeleton skeleton-line" style="--b-w:1px;--b-c:#f0f0f0;--bdrs:5px;--lines:3;--c-bg: #F8F7FC;">&lt;/div></code></pre>
+          <div class="result">
+            <div
+              class="skeleton skeleton-line"
+              style="
+                --lines: 3;
+                --c-bg: #f8f7fc;
+                --b-w: 1px;
+                --b-c: #f0f0f0;
+                --bdrs: 5px;
+              "
+            ></div>
+          </div>
+        </div>
 
-            <div class="properties">
-                <span class="prop">--c-bg (container-background)</span>
-            </div>
-            <div class="box">
-<pre><code class="code">&lt;div class="skeleton skeleton-line" style="--lines:3;--c-bg: #F8F7FC;">&lt;/div></code></pre>
-                <div class="result">
-                    <div class="skeleton skeleton-line" style="--lines:3;--c-bg: #F8F7FC;"></div>
-                </div>
-            </div>
+        <div class="properties">
+          <div class="prop-wrp">
+            <span class="prop" id="--bg">--bg</span> (shape-background)
+          </div>
+        </div>
+        <div class="box">
+          <pre><code class="code">&lt;div class="skeleton skeleton-line" style="--lines:3;--c-bg:#faecf6;--bg:#eeb6e0;">&lt;/div></code></pre>
+          <div class="result">
+            <div
+              class="skeleton skeleton-line"
+              style="--lines: 3; --c-bg: #faecf6; --bg: #eeb6e0"
+            ></div>
+          </div>
+        </div>
 
-            <div class="properties">
-                <span class="prop">--bg (shape-background)</span>
-            </div>
-            <div class="box">
-<pre><code class="code">&lt;div class="skeleton skeleton-line" style="--lines:3;--c-bg:#faecf6;--bg:#eeb6e0;">&lt;/div></code></pre>
-                <div class="result">
-                    <div class="skeleton skeleton-line" style="--lines:3;--c-bg:#faecf6;--bg:#eeb6e0;"></div>
-                </div>
-            </div>
+        <div class="properties">
+          <div class="prop-wrp">
+            <span class="prop" id="--shine">--shine</span> (shine-color)
+          </div>
+        </div>
+        <div class="box">
+          <pre><code class="code">&lt;div class="skeleton skeleton-line" style="--lines:3;--c-bg:#faecf6;--bg:#eeb6e0;--shine:#f5c3da;">&lt;/div></code></pre>
+          <div class="result">
+            <div
+              class="skeleton skeleton-line"
+              style="
+                --lines: 3;
+                --c-bg: #faecf6;
+                --bg: #eeb6e0;
+                --shine: #f5c3da;
+              "
+            ></div>
+          </div>
+        </div>
 
-            <div class="properties">
-                <span class="prop">--shine (shine-color)</span>
-            </div>
-            <div class="box">
-<pre><code class="code">&lt;div class="skeleton skeleton-line" style="--lines:3;--c-bg:#faecf6;--bg:#eeb6e0;--shine:#f5c3da;">&lt;/div></code></pre>
-                <div class="result">
-                    <div class="skeleton skeleton-line" style="--lines:3;--c-bg:#faecf6;--bg:#eeb6e0;--shine:#f5c3da;"></div>
-                </div>
-            </div>
-
-
-            <p class="description">Are custom properties too long? You can store them in a class.</p>
-            <div class="box">
-<pre><code class="code">&lt;style>
+        <p class="description">
+          Are custom properties too long? You can store them in a class.
+        </p>
+        <div class="box">
+          <pre><code class="code">&lt;style>
 .my-class {
     --lines: 3;
     --c-bg: #faecf6;
@@ -208,207 +381,288 @@
 &lt;/style>
 
 &lt;div class="skeleton skeleton-line my-class">&lt;/div></code></pre>
-            <div class="result">
-                    <style>
-                    .my-class {
-                        --lines: 3;
-                        --c-bg: #faecf6;
-                        --bg: #eeb6e0;
-                        --shine: #f5c3da;
-                    }
-                    </style>
-                    <div class="skeleton skeleton-line my-class"></div>
-                </div>
-            </div>
+          <div class="result">
+            <style>
+              .my-class {
+                --lines: 3;
+                --c-bg: #faecf6;
+                --bg: #eeb6e0;
+                --shine: #f5c3da;
+              }
+            </style>
+            <div class="skeleton skeleton-line my-class"></div>
+          </div>
+        </div>
 
-            <div class="properties">
-                <span class="prop">--c-p (container-padding)</span>
-            </div>
-            <p class="description"></p>
-            <div class="box">
-<pre><code class="code">&lt;div class="skeleton skeleton-line" style="--lines:3;--c-bg: #F8F7FC;--c-p: 30px;">&lt;/div></code></pre>
-                <div class="result">
-                    <div class="skeleton skeleton-line" style="--lines:3;--c-bg: #F8F7FC;--c-p: 30px;"></div>
-                </div>
-            </div>
+        <div class="properties">
+          <div class="prop-wrp">
+            <span class="prop" id="--c-p">--c-p</span> (container-padding)
+          </div>
+        </div>
+        <p class="description"></p>
+        <div class="box">
+          <pre><code class="code">&lt;div class="skeleton skeleton-line" style="--lines:3;--c-bg: #F8F7FC;--c-p: 30px;">&lt;/div></code></pre>
+          <div class="result">
+            <div
+              class="skeleton skeleton-line"
+              style="--lines: 3; --c-bg: #f8f7fc; --c-p: 30px"
+            ></div>
+          </div>
+        </div>
 
-            <div class="properties">
-                <span class="class">.rect</span>
-                <span class="prop">--rect-h (rectangle-height)</span>
-            </div>
-            <p class="description">We can add another big rectangle with rect class.</p>
-            <div class="box">
-<pre><code class="code">&lt;div class="skeleton skeleton-rect" style="--rect-h:150px;--lines:3;">&lt;/div></code></pre>
-                <div class="result">
-                    <div class="skeleton skeleton-rect" style="--rect-h:150px;--lines:3;"></div>
-                </div>
-            </div>
+        <div class="properties">
+          <span class="class" id=".skeleton-rect">.skeleton-rect</span>
+          <div class="prop-wrp">
+            <span class="prop" id="--rect-h">--rect-h</span> (rectangle-height)
+          </div>
+        </div>
+        <p class="description">
+          We can add another big rectangle with rect class.
+        </p>
+        <div class="box">
+          <pre><code class="code">&lt;div class="skeleton skeleton-rect" style="--rect-h:150px;--lines:3;">&lt;/div></code></pre>
+          <div class="result">
+            <div
+              class="skeleton skeleton-rect"
+              style="--rect-h: 150px; --lines: 3"
+            ></div>
+          </div>
+        </div>
 
-            
+        <div class="properties">
+          <div class="prop-wrp">
+            <span class="prop" id="--g-gap">--g-gap</span> (group-gap)
+          </div>
+        </div>
 
-            <div class="properties">
-                <span class="prop">--g-gap (group-gap)</span>
-            </div>
+        <p class="description">
+          Gap between groups. e.g. rect and other lines or circle and other
+          lines.
+        </p>
 
-            <p class="description">Gap between groups. e.g. rect and other lines or circle and other lines.</p>
+        <div class="box">
+          <pre><code class="code">&lt;div class="skeleton skeleton-rect" style="--lines:3;--rect-h:150px;--g-gap:30px;">&lt;/div></code></pre>
+          <div class="result">
+            <div
+              class="skeleton skeleton-rect"
+              style="--lines: 3; --rect-h: 150px; --g-gap: 30px"
+            ></div>
+          </div>
+        </div>
+      </section>
 
-            <div class="box">
-<pre><code class="code">&lt;div class="skeleton skeleton-rect" style="--lines:3;--rect-h:150px;--g-gap:30px;">&lt;/div></code></pre>
-                <div class="result">
-                    <div class="skeleton skeleton-rect" style="--lines:3;--rect-h:150px;--g-gap:30px;"></div>
-                </div>
-            </div>
-        </section>
+      <section class="section">
+        <div class="properties">
+          <span class="class" id=".skeleton-circle">.skeleton-circle</span>
+          <div class="prop-wrp">
+            <span class="prop" id="--c-s">--c-s</span> (circle-size. Default
+            40px)
+          </div>
+        </div>
 
-        <section class="section">
-            <h2 id="circle">Circle</h2>
+        <p class="description">Simple circle.</p>
 
-            <div class="properties">
-                <span class="class">.circle</span>
-                <span class="prop">--c-s (circle-size. Default 40px)</span>
-            </div>
+        <div class="box">
+          <pre><code class="code">&lt;div class="skeleton skeleton-circle" style="--c-s: 60px;">&lt;/div></code></pre>
+          <div class="result">
+            <div class="skeleton skeleton-circle" style="--c-s: 60px"></div>
+          </div>
+        </div>
 
-            <p class="description">Simple circle.</p>
+        <div class="properties">
+          <span class="class" id=".skeleton-circle-line"
+            >.skeleton-circle-line</span
+          >
+        </div>
 
-            <div class="box">
-<pre><code class="code">&lt;div class="skeleton skeleton-circle" style="--c-s: 60px;">&lt;/div></code></pre>
-                <div class="result">
-                    <div class="skeleton skeleton-circle" style="--c-s: 60px;"></div>
-                </div>
-            </div>
+        <p class="description">Side by side circle and line.</p>
 
-            <div class="properties">
-                <span class="class">.circle-line</span>
-                <span class="prop">Default</span>
-            </div>
+        <div class="box">
+          <pre><code class="code">&lt;div class="skeleton skeleton-circle-line">&lt;/div></code></pre>
+          <div class="result">
+            <div class="skeleton skeleton-circle-line"></div>
+          </div>
+        </div>
 
-            <p class="description">Side by side circle and line.</p>
+        <div class="properties">
+          <div class="prop-wrp">
+            <span class="prop" id="--c-s">--c-s</span> (circle-size)
+          </div>
+        </div>
 
-            <div class="box">
-<pre><code class="code">&lt;div class="skeleton skeleton-circle-line">&lt;/div></code></pre>
-                <div class="result">
-                    <div class="skeleton skeleton-circle-line"></div>
-                </div>
-            </div>
+        <div class="box">
+          <pre><code class="code">&lt;div class="skeleton skeleton-circle-line" style="--c-s:60px">&lt;/div></code></pre>
+          <div class="result">
+            <div
+              class="skeleton skeleton-circle-line"
+              style="--c-s: 60px"
+            ></div>
+          </div>
+        </div>
 
-            <div class="properties">
-                <span class="prop">--c-s (circle-size)</span>
-            </div>
+        <div class="properties">
+          <span class="class" id=".skeleton-circle-multi-line"
+            >.skeleton-circle-multi-line</span
+          >
+        </div>
 
-            <div class="box">
-<pre><code class="code">&lt;div class="skeleton skeleton-circle-line" style="--c-s:60px">&lt;/div></code></pre>
-                <div class="result">
-                    <div class="skeleton skeleton-circle-line" style="--c-s:60px"></div>
-                </div>
-            </div>
+        <p class="description">
+          If you want to use multiple lines, you should use "circle-multi-line"
+          class.
+        </p>
 
-            <div class="properties">
-                <span class="class">.skeleton-circle-multi-line</span>
-            </div>
+        <div class="box">
+          <pre><code class="code">&lt;div class="skeleton skeleton-circle-multi-line" style="--c-s:80px;--lines:4;">&lt;/div></code></pre>
+          <div class="result">
+            <div
+              class="skeleton skeleton-circle-multi-line"
+              style="--c-s: 80px; --lines: 4"
+            ></div>
+          </div>
+        </div>
 
-            <p class="description">If you want to use multiple lines, you should use "circle-multi-line" class.</p>
+        <div class="properties">
+          <span class="class" id=".adapt-to-circle">.adapt-to-circle</span>
+        </div>
 
-            <div class="box">
-<pre><code class="code">&lt;div class="skeleton skeleton-circle-multi-line" style="--c-s:80px;--lines:4;">&lt;/div></code></pre>
-                <div class="result">
-                    <div class="skeleton skeleton-circle-multi-line" style="--c-s:80px;--lines:4;"></div>
-                </div>
-            </div>
+        <p class="description">
+          Just set <span class="prop inline">--c-s</span> (circle-size). The
+          lines will be produced and placed automatically based on the size of
+          the circle.
+        </p>
 
-            <div class="properties">
-                <span class="class">.adapt-to-circle</span>
-            </div>
+        <div class="box">
+          <pre><code class="code">&lt;div class="skeleton skeleton-circle-multi-line adapt-to-circle" style="--c-s:150px;">&lt;/div></code></pre>
+          <div class="result">
+            <div
+              class="skeleton skeleton-circle-multi-line adapt-to-circle"
+              style="--c-s: 150px"
+            ></div>
+          </div>
+        </div>
+      </section>
 
-            <p class="description">Just set --c-s (circle-size). The lines will be produced and placed automatically based on the size of the circle.</p>
+      <section class="section">
+        <div class="properties">
+          <span class="class" id=".skeleton-chart-columns"
+            >.skeleton-chart-columns</span
+          >
+          <div class="prop-wrp">
+            <span class="prop" id="--cols">--cols</span> (Count of columns.
+            Default 5, max 10)
+          </div>
+          <div class="prop-wrp">
+            <span class="prop" id="--col-w">--col-w</span> (column width.
+            Default 25px)
+          </div>
+          <div class="prop-wrp">
+            <span class="prop" id="--col-gap">--col-gap</span> (Gap between
+            columns. Default 25px)
+          </div>
+          <div class="prop-wrp">
+            <span class="prop" id="--chart-h">--chart-h</span> (chart-height.
+            Default 200px)
+          </div>
+        </div>
 
-            <div class="box">
-<pre><code class="code">&lt;div class="skeleton skeleton-circle-multi-line adapt-to-circle" style="--c-s:150px;">&lt;/div></code></pre>
-                <div class="result">
-                    <div class="skeleton skeleton-circle-multi-line adapt-to-circle" style="--c-s:150px;"></div>
-                </div>
-            </div>
-        </section>
+        <p class="description">
+          You don't have to set --c-w (container-width). The width will be
+          calculated automatically based on the number of columns count and size
+          of columns gap.
+        </p>
 
-        <section class="section">
-            <h2 id="chart">Charts</h2>
+        <div class="box">
+          <pre><code class="code">&lt;div class="skeleton skeleton-chart-columns">&lt;/div></code></pre>
+          <div class="result">
+            <div class="skeleton skeleton-chart-columns"></div>
+          </div>
+        </div>
 
-            <div class="properties">
-                <span class="class">.chart-area</span>
-                <span class="prop">--chart-h (chart-height. Default 200px)</span>
-            </div>
+        <div class="box">
+          <pre><code class="code">&lt;div class="skeleton skeleton-chart-columns" style="--cols: 10;--col-w:50px;--col-gap:30px;--chart-h:300px;">&lt;/div></code></pre>
+          <div class="result">
+            <div
+              class="skeleton skeleton-chart-columns"
+              style="
+                --cols: 10;
+                --col-w: 50px;
+                --col-gap: 30px;
+                --chart-h: 300px;
+              "
+            ></div>
+          </div>
+        </div>
 
-            <div class="box">
-<pre><code class="code">&lt;div class="skeleton skeleton-chart-area" style="--c-w: 500px;">&lt;/div></code></pre>
-                <div class="result">
-                    <div class="skeleton skeleton-chart-area" style="--c-w: 500px;"></div>
-                </div>
-            </div>
+        <div class="properties">
+          <span class="class" id=".skeleton-chart-line"
+            >.skeleton-chart-line</span
+          >
+        </div>
 
-            <div class="properties">
-                <span class="prop">--chart-btm (height of the bottom area of ​​the chart. Default 40px)</span>
-            </div>
+        <div class="box">
+          <pre><code class="code">&lt;div class="skeleton skeleton-chart-line" style="--c-w: 500px;">&lt;/div></code></pre>
+          <div class="result">
+            <div
+              class="skeleton skeleton-chart-line"
+              style="--c-w: 500px"
+            ></div>
+          </div>
+        </div>
 
-            <div class="box">
-<pre><code class="code">&lt;div class="skeleton skeleton-chart-area" style="--c-w: 800px;--chart-h: 300px;--chart-btm:80px;">&lt;/div></code></pre>
-                <div class="result">
-                    <div class="skeleton skeleton-chart-area" style="--c-w: 800px;--chart-h: 300px;--chart-btm:80px;"></div>
-                </div>
-            </div>
+        <div class="properties">
+          <div class="prop-wrp">
+            <span class="prop" id="--chart-btm">--chart-btm</span> (height of
+            the bottom area of ​​the chart. Default 40px)
+          </div>
+        </div>
 
-            <div class="properties">
-                <span class="class">.chart-columns</span>
-                <span class="prop">--cols (Count of columns. Default 5, max 10)</span>
-                <span class="prop">--col-w (Column width. Default 25px)</span>
-                <span class="prop">--col-gap (Gap between columns. Default 25px)</span>
-                <span class="prop">--chart-h (Height of the chart. Default 200px)</span>
-            </div>
+        <div class="box">
+          <pre><code class="code">&lt;div class="skeleton skeleton-chart-line" style="--c-w: 400px;--chart-h: 150px;--chart-btm:60px;">&lt;/div></code></pre>
+          <div class="result">
+            <div
+              class="skeleton skeleton-chart-line"
+              style="--c-w: 400px; --chart-h: 150px; --chart-btm: 60px"
+            ></div>
+          </div>
+        </div>
+      </section>
 
-            <p class="description">You don't have to set --c-w (container-width). The width will be calculated automatically based on the number of columns count and size of columns gap.</p>
+      <section class="section">
+        <div class="properties">
+          <span class="class" id=".skeleton-card-1">.skeleton-card-1</span>
+          <div class="prop-wrp">
+            <span class="prop" id="--card-h">--card-h</span> (card-height.
+            Default 150px)
+          </div>
+          <div class="prop-wrp">
+            <span class="prop">--g-gap</span> is 30px as default for
+            .skeleton-card-1
+          </div>
 
-            <div class="box">
-<pre><code class="code">&lt;div class="skeleton skeleton-chart-columns">&lt;/div></code></pre>
-                <div class="result">
-                    <div class="skeleton skeleton-chart-columns"></div>
-                </div>
-            </div>
+          <div class="prop-wrp">
+            <span class="prop">--c-s</span> is 30px as default for
+            .skeleton-card-1
+          </div>
+        </div>
 
-            <div class="box">
-                <pre><code class="code">&lt;div class="skeleton skeleton-chart-columns" style="--cols: 10;--col-w:50px;--col-gap:30px;--chart-h:300px;">&lt;/div></code></pre>
-                <div class="result">
-                    <div class="skeleton skeleton-chart-columns" style="--cols: 10;--col-w:50px;--col-gap:30px;--chart-h:300px;"></div>
-                </div>
-            </div>
-        </section>
+        <p class="description">
+          Dimensions of the lines and the big rectangle will be calculated
+          automatically based on the
+          <span class="prop inline">--c-w</span> (container-width).
+        </p>
 
-        <section class="section">
-            <h2 id="card">Cards</h2>
-            <div class="properties">
-                <span class="class">.skeleton-card-1</span>
-                <span class="prop">--card-h (Height of the card. Default 150px)</span>
-                <span class="prop">--g-gap (Group gap. Between big rectangle and others. Default 30px)</span>
-                <span class="prop">--c-s (Circle size. Default 30px)</span>
-            </div>
-
-            <p class="description">Sizes of the three lines and the big rectangle will be calculated automatically based on the container width (--c-w).</p>
-
-            <div class="box">
-<pre><code class="code">&lt;div class="skeleton skeleton-card-1" style="--c-w: 600px;">&lt;/div></code></pre>
-                <div class="result">
-                    <div class="skeleton skeleton-card-1" style="--c-w: 600px;"></div>
-                </div>
-            </div>
-
-            <div class="box">
-                <pre><code class="code">&lt;div class="skeleton skeleton-card-1" style="--c-w: 1200px;--card-h: 300px;--c-s: 50px;--l-gap:20px;--g-gap: 60px;">&lt;/div></code></pre>
-                <div class="result">
-                    <div class="skeleton skeleton-card-1" style="--c-w: 1200px;--card-h:300px;--c-s: 50px;--l-gap:20px;--g-gap: 60px;"></div>
-                </div>
-            </div>
-        </section>
+        <div class="box">
+          <pre><code class="code">&lt;div class="skeleton skeleton-card-1" style="--c-w: 600px;">&lt;/div></code></pre>
+          <div class="result">
+            <div class="skeleton skeleton-card-1" style="--c-w: 600px"></div>
+          </div>
+        </div>
+      </section>
     </div>
 
-
     <script src="./assets/js/highlight.pack.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-</body>
+    <script>
+      hljs.initHighlightingOnLoad()
+    </script>
+  </body>
 </html>
