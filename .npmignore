@@ -4,3 +4,17 @@ node_modules
 # Documentation files
 docs
 index.html
+README.md
+
+# Config files
+.gitignore
+.prettierrc
+.prettierignore
+package-lock.json
+
+# Others
+css/css-skeletons.css
+css/css-skeletons.scss
+gulpfile.js
+
+

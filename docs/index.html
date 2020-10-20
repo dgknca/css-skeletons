@@ -12,7 +12,7 @@
   </head>
   <body>
     <div class="container">
-      <h1>css-skeletons</h1>
+      <header class="header"><h1>css-skeletons</h1></header>
       <h2>A single &lt;div>, dynamic, fully customizable CSS library.</h2>
       <section class="section">
         <h3>Custom Variables</h3>
@@ -22,202 +22,305 @@
               <th>Custom Variable</th>
               <th>Description</th>
               <th>Default</th>
+              <th>Valid Class</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td><a href="#--lines">--lines</a></td>
-              <td>Count of the lines.</td>
-              <td>1</td>
-            </tr>
-            <tr>
-              <td><a href="#--l-h">--l-h</a></td>
-              <td>(line-height) Height of the lines.</td>
-              <td>20px</td>
-            </tr>
-            <tr>
-              <td><a href="#--l-gap">--l-gap</a></td>
-              <td>(line-gap) Gap between the lines.</td>
-              <td>10px</td>
-            </tr>
-            <tr>
-              <td><a href="#--g-gap">--g-gap</a></td>
               <td>
-                (group-gap) Gap between the groups. E.g. circle and other lines.
+                <a href="#--c-w"><span class="prop">--c-w</span></a>
               </td>
-              <td>15px</td>
-            </tr>
-            <tr>
-              <td><a href="#--c-w">--c-w</a></td>
               <td>(container-width) Width of the container.</td>
               <td>300px</td>
+              <td rowspan="6">All</td>
             </tr>
             <tr>
-              <td><a href="#--c-p">--c-p</a></td>
+              <td>
+                <a href="#--c-p"><span class="prop">--c-p</span></a>
+              </td>
               <td>(container-padding) Padding of the container.</td>
               <td>10px</td>
             </tr>
             <tr>
-              <td><a href="#--c-bg">--c-bg</a></td>
+              <td>
+                <a href="#--c-bg"><span class="prop">--c-bg</span></a>
+              </td>
               <td>(container-background) Background of the container.</td>
               <td>transparent</td>
             </tr>
             <tr>
-              <td><a href="#--bg">--bg</a></td>
+              <td>
+                <a href="#--bg"><span class="prop">--bg</span></a>
+              </td>
               <td>Background of the shapes.</td>
               <td>#e2e1eb</td>
             </tr>
             <tr>
-              <td><a href="#--c-s">--c-s</a></td>
+              <td>
+                <a href="#--shine"><span class="prop">--shine</span></a>
+              </td>
+              <td>Color of the shine animation.</td>
+              <td>rgba(255,255,255, 0.2)</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="#--t"><span class="prop">--t</span></a>
+              </td>
+              <td>Duration of the shine animation.</td>
+              <td>2s</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="#--lines"><span class="prop">--lines</span></a>
+              </td>
+              <td>
+                Count of the lines.<br />
+                * Max value is 6 for .skeleton-card-2
+              </td>
+              <td>1</td>
+              <td>
+                <div class="prop-wrp">
+                  <span class="class">.skeleton-line</span>
+                  <span class="class">.skeleton-rect</span>
+                  <span class="class">.skeleton-circle-multi-line</span>
+                  <span class="class">.skeleton-card-2</span>
+                  <span class="class">.skeleton-list</span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a href="#--l-h"><span class="prop">--l-h</span></a>
+              </td>
+              <td>(line-height) Height of the lines.</td>
+              <td>20px</td>
+              <td rowspan="2">
+                <div class="prop-wrp">
+                  <span class="class">.skeleton-line</span>
+                  <span class="class">.skeleton-rect</span>
+                  <span class="class">.skeleton-circle-multi-line</span>
+                  <span class="class">.skeleton-card-2</span>
+                  <span class="class">.skeleton-list</span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a href="#--l-gap"><span class="prop">--l-gap</span></a>
+              </td>
+              <td>(line-gap) Gap between the lines.</td>
+              <td>10px</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="#--g-gap"><span class="prop">--g-gap</span></a>
+              </td>
+              <td>
+                (group-gap) Gap between the groups. E.g. circle and other lines.
+              </td>
+              <td>15px</td>
+              <td>
+                <div class="prop-wrp">
+                  <span class="class">.skeleton-rect</span>
+                  <span class="class">.skeleton-circle-line</span>
+                  <span class="class">.skeleton-circle-multi-line</span>
+                  <span class="class">.skeleton-card-1</span>
+                  <span class="class">.skeleton-card-2</span>
+                  <span class="class">.skeleton-list</span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a href="#--c-s"><span class="prop">--c-s</span></a>
+              </td>
               <td>(circle-size) Size of the circles.</td>
               <td>40px</td>
+              <td>
+                <div class="prop-wrp">
+                  <span class="class">.skeleton-circle</span>
+                  <span class="class">.skeleton-circle-line</span>
+                  <span class="class">.skeleton-circle-multi-line</span>
+                  <span class="class">.skeleton-card-1</span>
+                </div>
+              </td>
             </tr>
             <tr>
-              <td><a href="#--rect-h">--rect-h</a></td>
+              <td>
+                <a href="#--rect-h"><span class="prop">--rect-h</span></a>
+              </td>
               <td>(rectangle-height) Height of the rectangle at the top.</td>
               <td>80px</td>
+              <td>
+                <div class="prop-wrp">
+                  <span class="class">.skeleton-rect</span>
+                </div>
+              </td>
             </tr>
             <tr>
-              <td><a href="#--chart-h">--chart-h</a></td>
+              <td>
+                <a href="#--chart-h"><span class="prop">--chart-h</span></a>
+              </td>
               <td>(chart-height) Height of the chart.</td>
               <td>200px</td>
+              <td>
+                <div class="prop-wrp">
+                  <span class="class">.skeleton-chart-columns</span>
+                  <span class="class">.skeleton-chart-line</span>
+                </div>
+              </td>
             </tr>
             <tr>
-              <td><a href="#--chart-btm">--chart-btm</a></td>
+              <td>
+                <a href="#--chart-btm"><span class="prop">--chart-btm</span></a>
+              </td>
               <td>
                 (chart-bottom) Height of the bottom area of the
                 ".skeleton-chart-line".
               </td>
               <td>40px</td>
+              <td>
+                <div class="prop-wrp">
+                  <span class="class">.skeleton-chart-line</span>
+                </div>
+              </td>
             </tr>
             <tr>
-              <td><a href="#--cols">--cols</a></td>
               <td>
-                Columns count of the ".skeleton-chart-columns". Can be up to 10.
+                <a href="#--cols"><span class="prop">--cols</span></a>
+              </td>
+              <td>
+                Columns count of the ".skeleton-chart-columns". Max value 10.
               </td>
               <td>5</td>
+              <td rowspan="3">
+                <div class="prop-wrp">
+                  <span class="class">.skeleton-chart-columns</span>
+                </div>
+              </td>
             </tr>
             <tr>
-              <td><a href="#--col-w">--col-w</a></td>
+              <td>
+                <a href="#--col-w"><span class="prop">--col-w</span></a>
+              </td>
               <td>Width of the columns.</td>
               <td>25px</td>
             </tr>
             <tr>
-              <td><a href="#--col-gap">--col-gap</a></td>
+              <td>
+                <a href="#--col-gap"><span class="prop">--col-gap</span></a>
+              </td>
               <td>Gap between the columns.</td>
               <td>25px</td>
             </tr>
             <tr>
-              <td><a href="#--card-h">--card-h</a></td>
+              <td>
+                <a href="#--card-h"><span class="prop">--card-h</span></a>
+              </td>
               <td>Height of the cards.</td>
               <td>150px</td>
+              <td>
+                <div class="prop-wrp">
+                  <span class="class">.skeleton-card-1</span>
+                </div>
+              </td>
             </tr>
             <tr>
-              <td><a href="#--shine">--shine</a></td>
-              <td>Color of the shine animation.</td>
-              <td>#eaeaf1</td>
+              <td>
+                <a href="#--f-l-w"><span class="prop">--f-l-w</span></a>
+              </td>
+              <td>First line width.</td>
+              <td>90%</td>
+              <td rowspan="7">
+                <div class="prop-wrp">
+                  <span class="class">.skeleton-card-2</span>
+                </div>
+              </td>
             </tr>
             <tr>
-              <td><a href="#--t">--t</a></td>
-              <td>Duration of the shine animation.</td>
-              <td>2s</td>
+              <td>
+                <a href="#--f-l-h"><span class="prop">--f-l-h</span></a>
+              </td>
+              <td>First line height.</td>
+              <td>25px</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="#--f-l-c"><span class="prop">--f-l-c</span></a>
+              </td>
+              <td>First line color.</td>
+              <td>#e2e1eb</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="#--s-l-w"><span class="prop">--s-l-w</span></a>
+              </td>
+              <td>Second line width.</td>
+              <td>70%</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="#--s-l-h"><span class="prop">--s-l-h</span></a>
+              </td>
+              <td>Second line height.</td>
+              <td>20px</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="#--s-l-c"><span class="prop">--s-l-c</span></a>
+              </td>
+              <td>Second line color.</td>
+              <td>#e2e1eb</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="#--s-l-m-t"><span class="prop">--s-l-m-t</span></a>
+              </td>
+              <td>Second line margin-top.</td>
+              <td>15px</td>
             </tr>
           </tbody>
         </table>
 
-        <h3>Classes</h3>
+        <h3>Helper Classes</h3>
         <table class="classes-table">
           <thead>
             <tr>
               <th style="width: 20%">Class</th>
               <th style="width: 30%">Description</th>
-              <th style="width: 20%">Required</th>
-              <th style="width: 30%">Valid Variables</th>
+              <th style="width: 20%">Required Class</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>VALID FOR ALL</td>
-              <td>Desc</td>
-              <td>-</td>
-              <td>--bg, --c-bg, --c-w, --c-p, --shine, --t</td>
-            </tr>
-            <tr>
-              <td><a href="#.skeleton-line">.skeleton-line</a></td>
-              <td>Desc</td>
-              <td>-</td>
-              <td>--l-h, --lines, --l-gap</td>
-            </tr>
-            <tr>
-              <td><a href="#.skeleton-circle">.skeleton-circle</a></td>
-              <td>Desc</td>
-              <td>-</td>
-              <td>--c-s</td>
-            </tr>
-            <tr>
               <td>
-                <a href="#.skeleton-circle-line">.skeleton-circle-line</a>
-              </td>
-              <td>Desc</td>
-              <td>-</td>
-              <td>--c-s, --g-gap, --l-gap</td>
-            </tr>
-            <tr>
-              <td>
-                <a href="#.skeleton-circle-multi-line"
-                  >.skeleton-circle-multi-line</a
+                <a href="#.adapt-to-circle"
+                  ><span class="class">.adapt-to-circle</span></a
                 >
               </td>
-              <td>Desc</td>
-              <td>-</td>
-              <td>--c-s, --l-h, --lines, --l-gap, --g-gap</td>
-            </tr>
-            <tr>
-              <td><a href="#.adapt-to-circle">.adapt-to-circle</a></td>
               <td>
-                No need to set --lines. Just need to set --c-s (circle-size).
-                The lines will be produced and placed automatically based on the
-                size of the circle.
+                No <span class="prop">--lines</span> needed. Just need to set
+                <span class="prop">--c-s</span> (circle-size). The lines will be
+                produced and placed automatically based on the size of the
+                circle.
               </td>
-              <td>.skeleton-circle-multi-line</td>
-              <td>--c-s, --l-h, --lines, --l-gap, --g-gap</td>
-            </tr>
-            <tr>
-              <td><a href="#.skeleton-rect">.skeleton-rect</a></td>
-              <td>Desc</td>
-              <td>-</td>
-              <td>--rect-h, --l-h, --lines, --l-gap, --g-gap</td>
-            </tr>
-            <tr>
               <td>
-                <a href="#.skeleton-chart-columns">.skeleton-chart-columns</a>
+                <div class="prop-wrp">
+                  <span class="class">.skeleton-circle-multi-line</span>
+                </div>
               </td>
-              <td>Desc</td>
-              <td>-</td>
-              <td>--cols, --col-w, --col-gap, --chart-h</td>
             </tr>
             <tr>
-              <td><a href="#.skeleton-chart-line">.skeleton-chart-line</a></td>
-              <td>Desc</td>
-              <td>-</td>
-              <td>--chart-btm, --chart-h</td>
-            </tr>
-            <tr>
-              <td><a href="#.skeleton-card-1">.skeleton-card-1</a></td>
-              <td>Desc</td>
-              <td>-</td>
-              <td>--card-h, --g-gap, --c-s</td>
-            </tr>
-            <tr>
-              <td>.no-animate</td>
+              <td><span class="class">.no-animate</span></td>
               <td>Cancels the animation.</td>
-              <td>-</td>
-              <td>-</td>
+              <td></td>
             </tr>
           </tbody>
         </table>
       </section>
+
       <section class="section">
+        <h3>Examples</h3>
         <div class="properties">
           <span class="class" id=".skeleton-line">.skeleton-line</span>
         </div>
@@ -613,6 +716,31 @@
           <pre><code class="code">&lt;div class="skeleton skeleton-card-1" style="--c-w: 600px;">&lt;/div></code></pre>
           <div class="result">
             <div class="skeleton skeleton-card-1" style="--c-w: 600px"></div>
+          </div>
+        </div>
+
+        <div class="properties">
+          <span class="class" id=".skeleton-card-1">.skeleton-card-2</span>
+        </div>
+
+        <div class="box">
+          <pre><code class="code">&lt;div class="skeleton skeleton-card-2" style="--c-w: 600px;--lines:3;">&lt;/div></code></pre>
+          <div class="result">
+            <div
+              class="skeleton skeleton-card-2"
+              style="--c-w: 600px; --lines: 3"
+            ></div>
+          </div>
+        </div>
+
+        <div class="properties">
+          <span class="class" id=".skeleton-list">.skeleton-list</span>
+        </div>
+
+        <div class="box">
+          <pre><code class="code">&lt;div class="skeleton skeleton-list" style="--lines:5;">&lt;/div></code></pre>
+          <div class="result">
+            <div class="skeleton skeleton-list" style="--lines: 5"></div>
           </div>
         </div>
       </section>

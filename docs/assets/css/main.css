@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Noto+Sans:wght@400;700&display=swap');
 
+html,body {
+    width: 100%;
+}
+
 html {
     font-family: 'Noto Sans', sans-serif;
 }
@@ -37,6 +41,16 @@ a, a:visited {
     text-decoration: none;
 }
 
+.header {
+    width: 100vw;
+    left: 0;
+    position: absolute;
+    top: 0;
+    height: 50vh;
+    background: #000;
+    display: none;
+}
+
 .container {
     max-width: 1000px;
     width: 100%;
@@ -69,22 +83,6 @@ a, a:visited {
     border-radius: 20px 20px 0 0;
 }
 
-::-webkit-scrollbar {
-    width: 10px;
-}
- 
-::-webkit-scrollbar-track {
-    background: #e0e0e0;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #888;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #555;
-}
-
 .code::-webkit-scrollbar {
     height: 10px;
 }
@@ -115,12 +113,13 @@ background: #555;
 }
 
 .class {
+    /* color: #400c21;
+    background: #ffbcf7; */
     color: #400c21;
-    background: #ffbcf7;
+    background: #ffbcf793;
     padding: 5px;
     font-family: 'Fira Code', monospace;
     letter-spacing: -0.5px;
-    font-weight: 700;
     font-size: 18px;
 }
 
@@ -132,11 +131,34 @@ background: #555;
     margin-top: 10px;
 }
 
+td .prop-wrp {
+    margin-left: 0;
+    margin-top: 0;
+    white-space: nowrap;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+td .prop-wrp .class:not(:first-child){
+    margin-top: 10px;
+}
+
 .prop {
     display: inline-block;
     color: #0324ab;
     background: #edf0fc;
     padding: 5px;
+}
+
+td .class {
+    padding: 2px 5px;
+    font-size: 16px;
+}
+
+td .prop {
+    padding: 2px 5px;
+    white-space: nowrap;
 }
 
 .class:target,
@@ -197,4 +219,10 @@ table td, table th{
     font-size: 16px;
     line-height: 1.5;
     color:#24292e;
+    vertical-align: middle;
+
+}
+
+.variables-table tr td:nth-child(4){
+    padding:20px 15px;
 }
