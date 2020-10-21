@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Noto+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+::selection {
+    background: rgba(0, 0, 0, 0.1);
+}
 
 html,
 body {
@@ -18,11 +23,30 @@ body {
     box-sizing: border-box;
 }
 
+h2,
+h3 {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.5;
+}
+
+.site-title>span:nth-child(1) {
+    background: linear-gradient(#87F5FB, #87F5FB) 0 100%/100% 15px no-repeat;
+}
+
+.site-title>span:nth-child(2) {
+    background: linear-gradient(#CEE27D, #CEE27D) 0 100%/100% 15px no-repeat;
+}
+
+.site-title>span:nth-child(3) {
+    background: linear-gradient(#FF9FAF, #FF9FAF) 0 100%/100% 15px no-repeat;
+}
+
 h2 {
-    font-size: 2rem;
+    font-size: 2.2rem;
     color: #333;
     margin-top: 1.8rem;
     font-weight: 700;
+    text-align: center;
 }
 
 h3 {
@@ -85,6 +109,10 @@ a:visited {
     border-radius: 20px 20px 0 0;
 }
 
+.code *::selection {
+    background: rgba(255, 255, 255, 0.2);
+}
+
 .code::-webkit-scrollbar {
     height: 10px;
 }
@@ -117,7 +145,7 @@ a:visited {
 .class {
     /* color: #400c21;
     background: #ffbcf7; */
-    color: #400c21;
+    color: #400c21 !important;
     background: #ffbcf793;
     padding: 5px;
     font-family: 'Fira Code', monospace;
@@ -146,9 +174,10 @@ td .prop-wrp .class:not(:first-child) {
 
 .prop {
     display: inline-block;
-    color: #0324ab;
+    color: #0324ab !important;
     background: #edf0fc;
     padding: 3px 4px;
+    font-family: 'Fira Code', monospace;
 }
 
 td .class {
@@ -164,14 +193,12 @@ td .prop {
 .prop:target {
     background: yellow;
     color: #000;
-    font-weight: 700;
     letter-spacing: 0;
 }
 
 .prop.inline {
     display: inline;
     margin: 0;
-    font-family: 'Fira Code', monospace;
 }
 
 .hljs-attribute,
@@ -198,17 +225,13 @@ td .prop {
     color: hsl(44, 74%, 68%);
 }
 
-table {}
-
 table th {
     text-align: left;
     font-weight: 700;
     font-size: 1.1rem;
 }
 
-table tr:nth-child(2n) {
-    background-color: #f6f8fa;
-}
+
 
 table td,
 table th {
