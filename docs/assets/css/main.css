@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Noto+Sans:wght@400;700&display=swap');
 
-html,body {
+html,
+body {
     width: 100%;
 }
 
 html {
     font-family: 'Noto Sans', sans-serif;
+    font-size: 14px;
 }
 
 body {
@@ -36,7 +38,8 @@ h4 {
     font-weight: 400;
 }
 
-a, a:visited {
+a,
+a:visited {
     color: royalblue;
     text-decoration: none;
 }
@@ -65,7 +68,6 @@ a, a:visited {
 }
 
 .description {
-    font-size: 18px;
     margin-top: 20px;
     line-height: 2;
 }
@@ -86,17 +88,17 @@ a, a:visited {
 .code::-webkit-scrollbar {
     height: 10px;
 }
-  
+
 .code::-webkit-scrollbar-track {
-background: #e0e0e0;
+    background: #e0e0e0;
 }
 
 .code::-webkit-scrollbar-thumb {
-background: #888;
+    background: #888;
 }
 
 .code::-webkit-scrollbar-thumb:hover {
-background: #555;
+    background: #555;
 }
 
 .result {
@@ -120,13 +122,11 @@ background: #555;
     padding: 5px;
     font-family: 'Fira Code', monospace;
     letter-spacing: -0.5px;
-    font-size: 18px;
 }
 
 .prop-wrp {
     font-family: 'Fira Code', monospace;
     letter-spacing: -0.5px;
-    font-size: 16px;
     margin-left: 20px;
     margin-top: 10px;
 }
@@ -140,7 +140,7 @@ td .prop-wrp {
     align-items: flex-start;
 }
 
-td .prop-wrp .class:not(:first-child){
+td .prop-wrp .class:not(:first-child) {
     margin-top: 10px;
 }
 
@@ -148,16 +148,15 @@ td .prop-wrp .class:not(:first-child){
     display: inline-block;
     color: #0324ab;
     background: #edf0fc;
-    padding: 5px;
+    padding: 3px 4px;
 }
 
 td .class {
     padding: 2px 5px;
-    font-size: 16px;
 }
 
 td .prop {
-    padding: 2px 5px;
+    padding: 2px 4px;
     white-space: nowrap;
 }
 
@@ -173,8 +172,8 @@ td .prop {
     display: inline;
     margin: 0;
     font-family: 'Fira Code', monospace;
-    font-size: 16px;
 }
+
 .hljs-attribute,
 .hljs-doctag,
 .hljs-keyword,
@@ -199,30 +198,30 @@ td .prop {
     color: hsl(44, 74%, 68%);
 }
 
-table {
-}
+table {}
 
 table th {
     text-align: left;
     font-weight: 700;
-    font-size: 18px;
+    font-size: 1.1rem;
 }
 
 table tr:nth-child(2n) {
     background-color: #f6f8fa;
 }
 
-table td, table th{
+table td,
+table th {
     padding: 8px 15px;
-    border:1px solid #dfe2e5;
+    border: 1px solid #dfe2e5;
     border-collapse: collapse;
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.5;
-    color:#24292e;
+    color: #24292e;
     vertical-align: middle;
 
 }
 
-.variables-table tr td:nth-child(4){
-    padding:20px 15px;
+.variables-table tr td:nth-child(4) {
+    padding: 20px 15px;
 }

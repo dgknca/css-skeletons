@@ -13,7 +13,7 @@
   <body>
     <div class="container">
       <header class="header"><h1>css-skeletons</h1></header>
-      <h2>A single &lt;div>, dynamic, fully customizable CSS library.</h2>
+      <h2>Single &lt;div>, fully customizable and dynamic CSS library.</h2>
       <section class="section">
         <h3>Custom Variables</h3>
         <table class="variables-table">
@@ -101,6 +101,7 @@
                   <span class="class">.skeleton-circle-multi-line</span>
                   <span class="class">.skeleton-card-2</span>
                   <span class="class">.skeleton-list</span>
+                  <span class="class">.skeleton-youtube</span>
                 </div>
               </td>
             </tr>
@@ -127,6 +128,7 @@
                   <span class="class">.skeleton-card-1</span>
                   <span class="class">.skeleton-card-2</span>
                   <span class="class">.skeleton-list</span>
+                  <span class="class">.skeleton-youtube</span>
                 </div>
               </td>
             </tr>
@@ -142,6 +144,7 @@
                   <span class="class">.skeleton-circle-line</span>
                   <span class="class">.skeleton-circle-multi-line</span>
                   <span class="class">.skeleton-card-1</span>
+                  <span class="class">.skeleton-youtube</span>
                 </div>
               </td>
             </tr>
@@ -154,6 +157,7 @@
               <td>
                 <div class="prop-wrp">
                   <span class="class">.skeleton-rect</span>
+                  <span class="class">.skeleton-youtube</span>
                 </div>
               </td>
             </tr>
@@ -640,15 +644,15 @@
         </div>
 
         <div class="box">
-          <pre><code class="code">&lt;div class="skeleton skeleton-chart-columns" style="--cols: 10;--col-w:50px;--col-gap:30px;--chart-h:300px;">&lt;/div></code></pre>
+          <pre><code class="code">&lt;div class="skeleton skeleton-chart-columns" style="--cols: 10;--col-w:30px;--col-gap:20px;--chart-h:200px;">&lt;/div></code></pre>
           <div class="result">
             <div
               class="skeleton skeleton-chart-columns"
               style="
                 --cols: 10;
-                --col-w: 50px;
-                --col-gap: 30px;
-                --chart-h: 300px;
+                --col-w: 30px;
+                --col-gap: 20px;
+                --chart-h: 200px;
               "
             ></div>
           </div>
@@ -741,6 +745,17 @@
           <pre><code class="code">&lt;div class="skeleton skeleton-list" style="--lines:5;">&lt;/div></code></pre>
           <div class="result">
             <div class="skeleton skeleton-list" style="--lines: 5"></div>
+          </div>
+        </div>
+
+        <div class="properties">
+          <span class="class" id=".skeleton-list">.skeleton-youtube</span>
+        </div>
+
+        <div class="box">
+          <pre><code class="code">&lt;div class="skeleton skeleton-youtube">&lt;/div></code></pre>
+          <div class="result">
+            <div class="skeleton skeleton-youtube"></div>
           </div>
         </div>
       </section>
