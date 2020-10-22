@@ -15,7 +15,7 @@
   width: var(--c-w);
   position: relative;
   background: var(--c-bg);
-  box-sizing: content-box !important;
+  box-sizing: border-box !important;
   --ln:linear-gradient(#000, #000);
   --circle: radial-gradient(calc(var(--c-s) / 2) calc(var(--c-s) / 2) at 50% 50%,#000 98%,transparent 100%); }
   .skeleton::before, .skeleton::after {
@@ -37,20 +37,20 @@
   .skeleton.no-animate::after {
     animation: none; }
   .skeleton.skeleton-line {
-    height: calc((var(--l-h) * var(--lines)) + (var(--l-gap) * (var(--lines) - 1))); }
+    height: calc((var(--l-h) * var(--lines)) + (var(--l-gap) * (var(--lines) - 1)) + var(--c-p) * 2); }
     .skeleton.skeleton-line::before, .skeleton.skeleton-line::after {
       --m: linear-gradient(#000 0 var(--l-h),transparent var(--l-h) calc(var(--l-h) + var(--l-gap))) 0 0/100% calc(var(--l-h) + var(--l-gap));
       -webkit-mask: var(--m);
       mask: var(--m); }
   .skeleton.skeleton-circle {
-    width: var(--c-s);
-    height: var(--c-s); }
+    width: calc(var(--c-s) + var(--c-p) * 2);
+    height: calc(var(--c-s) + var(--c-p) * 2); }
     .skeleton.skeleton-circle::before, .skeleton.skeleton-circle::after {
       --m: var(--circle) 0 50% / var(--c-s) var(--c-s) no-repeat;
       -webkit-mask: var(--m);
       mask: var(--m); }
   .skeleton.skeleton-circle-line {
-    height: var(--c-s); }
+    height: calc(var(--c-s) + var(--c-p) * 2); }
     .skeleton.skeleton-circle-line::before, .skeleton.skeleton-circle-line::after {
       --m: var(--circle) 0 50% / calc(var(--c-s)) calc(var(--c-s)),
               var(--ln) calc(var(--c-s) + var(--g-gap)) 50%/100% var(--l-h);
@@ -59,19 +59,19 @@
       -webkit-mask-repeat: no-repeat;
       mask-repeat: no-repeat; }
   .skeleton.skeleton-circle-multi-line {
-    height: calc((var(--l-h) * var(--lines)) + (var(--l-gap) * (var(--lines) - 1))); }
+    height: calc((var(--l-h) * var(--lines)) + (var(--l-gap) * (var(--lines) - 1)) + var(--c-p) * 2); }
     .skeleton.skeleton-circle-multi-line::before, .skeleton.skeleton-circle-multi-line::after {
       --m: var(--circle) 0 50% / calc(var(--c-s)) calc(var(--c-s)) no-repeat,
               linear-gradient(#000 0 var(--l-h), transparent var(--l-h) calc(var(--l-h) + var(--l-gap))) calc(var(--c-s) + var(--g-gap)) 0%/100% calc(var(--l-h) + var(--l-gap)) no-repeat repeat;
       -webkit-mask: var(--m);
       mask: var(--m); }
     .skeleton.skeleton-circle-multi-line.adapt-to-circle {
-      height: var(--c-s); }
+      height: calc(var(--c-s) + var(--c-p) * 2); }
       .skeleton.skeleton-circle-multi-line.adapt-to-circle::before, .skeleton.skeleton-circle-multi-line.adapt-to-circle::after {
         -webkit-mask-repeat: no-repeat, no-repeat space;
         mask-repeat: no-repeat, no-repeat space; }
   .skeleton.skeleton-rect {
-    height: calc((var(--l-h) * var(--lines)) + (var(--l-gap) * (var(--lines) - 1)) + var(--rect-h) + var(--g-gap)); }
+    height: calc((var(--l-h) * var(--lines)) + (var(--l-gap) * (var(--lines) - 1)) + var(--rect-h) + var(--g-gap) + var(--c-p) * 2); }
     .skeleton.skeleton-rect::before, .skeleton.skeleton-rect::after {
       --m: var(--ln) 0 0/100% var(--rect-h) no-repeat, 
               repeating-linear-gradient(#000 0 var(--l-h), transparent var(--l-h) calc(var(--l-h) + var(--l-gap))) 0 calc(var(--rect-h) + var(--g-gap)) / 100% calc(100% - (var(--rect-h) + var(--g-gap))) no-repeat;
@@ -80,7 +80,7 @@
   .skeleton.skeleton-chart-line {
     --chart-btm: 40px;
     --chart-h: 200px;
-    height: var(--chart-h); }
+    height: calc(var(--chart-h) + var(--c-p) * 2); }
     .skeleton.skeleton-chart-line::before, .skeleton.skeleton-chart-line::after {
       --m: var(--ln) 0 100% / 100% var(--chart-btm) no-repeat,
               linear-gradient(to left bottom,transparent 0 49.5%, #000 50% 100%) left 0 bottom var(--chart-btm) / calc((var(--c-w) / 10) * 2) calc(var(--chart-h) / 2) no-repeat,
@@ -95,8 +95,8 @@
     --col-gap: 25px;
     --o-l: calc(var(--col-w) + var(--col-gap));
     --chart-h: 200px;
-    height: var(--chart-h);
-    width: calc(((var(--cols) - 1) * var(--o-l)) + var(--col-w)); }
+    height: calc(var(--chart-h) + var(--c-p) * 2);
+    width: calc(((var(--cols) - 1) * var(--o-l)) + var(--col-w) + var(--c-p) * 2); }
     .skeleton.skeleton-chart-columns::before, .skeleton.skeleton-chart-columns::after {
       --m: var(--ln) 0 100% / var(--col-w) calc((var(--chart-h) / 10) * 4),
               var(--ln) calc(var(--o-l)) 100% / var(--col-w) calc((var(--chart-h) / 10) * 3),
@@ -116,15 +116,16 @@
     --card-h:150px;
     --g-gap: 30px;
     --c-s: 30px;
-    height: var(--card-h);
-    --r-x:calc((var(--c-w) / 4) + var(--g-gap));
-    --l-x:calc((var(--c-w) / 4) + var(--g-gap) + var(--c-s) + var(--l-gap));
-    --l-w: calc((var(--c-w) - (var(--c-w) / 4 + (var(--g-gap) * 2) + (var(--l-gap) * 2) + var(--c-s) * 2)) / 2); }
+    --c-w-o:(var(--c-w) - var(--c-p) * 2);
+    height: calc(var(--card-h) + var(--c-p) * 2);
+    --r-x:calc((var(--c-w-o) / 4) + var(--g-gap));
+    --l-x:calc((var(--c-w-o) / 4) + var(--g-gap) + var(--c-s) + var(--l-gap));
+    --l-w: calc((var(--c-w-o) - (var(--c-w-o) / 4 + (var(--g-gap) * 2) + (var(--l-gap) * 2) + var(--c-s) * 2)) / 2); }
     .skeleton.skeleton-card-1::before, .skeleton.skeleton-card-1::after {
-      --m: var(--ln) 0 0 / calc(var(--c-w) / 4) var(--card-h),
-              var(--ln) calc((var(--c-w) / 4) + var(--g-gap)) 0 / calc(var(--c-w) - ((var(--c-w) / 4) + var(--g-gap))) calc(var(--card-h) / 5),
-              var(--ln) calc((var(--c-w) / 4) + var(--g-gap)) calc(var(--card-h) / 3) / calc(var(--c-w) - ((var(--c-w) / 4) + var(--g-gap))) calc(var(--card-h) / 8),
-              var(--ln) calc((var(--c-w) / 4) + var(--g-gap)) calc(var(--card-h) / 1.8) / calc(var(--c-w) - ((var(--c-w) / 4) + var(--g-gap))) calc(var(--card-h) / 8),
+      --m: var(--ln) 0 0 / calc(var(--c-w-o) / 4) var(--card-h),
+              var(--ln) calc((var(--c-w-o) / 4) + var(--g-gap)) 0 / calc(var(--c-w-o) - ((var(--c-w-o) / 4) + var(--g-gap))) calc(var(--card-h) / 5),
+              var(--ln) calc((var(--c-w-o) / 4) + var(--g-gap)) calc(var(--card-h) / 3) / calc(var(--c-w-o) - ((var(--c-w-o) / 4) + var(--g-gap))) calc(var(--card-h) / 8),
+              var(--ln) calc((var(--c-w-o) / 4) + var(--g-gap)) calc(var(--card-h) / 1.8) / calc(var(--c-w-o) - ((var(--c-w-o) / 4) + var(--g-gap))) calc(var(--card-h) / 8),
               var(--circle) var(--r-x) 100% / calc(var(--c-s)) calc(var(--c-s)),
               var(--ln) left var(--l-x) bottom calc((var(--c-s) - (var(--card-h) / 8)) / 2) / var(--l-w) calc(var(--card-h) / 8),
               var(--circle) calc(var(--l-x) + var(--l-w) + var(--g-gap)) 100% / calc(var(--c-s)) calc(var(--c-s)),
@@ -141,7 +142,7 @@
     --s-l-h: 20px;
     --s-l-c: rgba(54,216,175,0.3);
     --s-l-m-t: 15px;
-    height: calc(var(--f-l-h) + var(--s-l-m-t) +  var(--s-l-h) + var(--g-gap) + ((var(--l-h) * var(--lines)) + (var(--l-gap) * (var(--lines) - 1)))); }
+    height: calc(var(--f-l-h) + var(--s-l-m-t) +  var(--s-l-h) + var(--g-gap) + ((var(--l-h) * var(--lines)) + (var(--l-gap) * (var(--lines) - 1))) + var(--c-p) * 2); }
     .skeleton.skeleton-card-2::before, .skeleton.skeleton-card-2::after {
       --top: calc(var(--f-l-h) + var(--s-l-m-t) + var(--s-l-h) + var(--g-gap));
       --m: var(--ln) 0 0/var(--f-l-w) var(--f-l-h),
@@ -161,7 +162,7 @@
   .skeleton.skeleton-list {
     --b: calc(var(--l-h) * 1.4);
     --p: calc((var(--b) - var(--l-h)) / 2);
-    height: calc(var(--b) + ((var(--b) + var(--l-gap)) * (var(--lines) - 1))); }
+    height: calc(var(--b) + ((var(--b) + var(--l-gap)) * (var(--lines) - 1)) + var(--c-p) * 2); }
     .skeleton.skeleton-list::before, .skeleton.skeleton-list::after {
       --m: repeating-linear-gradient(#000 0 var(--b), transparent var(--b) calc(var(--b) + var(--l-gap))) 0 0 / var(--b) 100%,
            repeating-linear-gradient(transparent 0 var(--p), #000 var(--p) calc(var(--p) + var(--l-h)), transparent calc(var(--p) + var(--l-h)) calc(calc(var(--p) * 2 + var(--l-gap) + var(--l-h)))) calc(var(--b) + var(--g-gap)) 0 / calc(var(--c-w) - (var(--b) + var(--g-gap))) 100%;
@@ -172,14 +173,13 @@
   .skeleton.skeleton-youtube {
     --g-gap: 10px;
     --rect-h: 150px;
-    --c-w: 270px;
     --c-s: 36px;
-    height: calc(var(--rect-h) + var(--g-gap) + var(--l-gap) + (var(--l-h) * 2)); }
+    height: calc(var(--rect-h) + var(--g-gap) + var(--l-gap) + (var(--l-h) * 2) + var(--c-p) * 2); }
     .skeleton.skeleton-youtube::before, .skeleton.skeleton-youtube::after {
-      --m: var(--ln) 0 0 / 100% var(--rect-h) no-repeat,
-            var(--circle) 0 calc(var(--rect-h) + var(--g-gap)) / var(--c-s) var(--c-s) no-repeat,
-            var(--ln) calc(var(--c-s) + var(--g-gap)) calc(var(--rect-h) + var(--g-gap)) / calc((var(--c-w) - (var(--c-s) + var(--g-gap))) * 0.9) var(--l-h) no-repeat,
-            var(--ln) calc(var(--c-s) + var(--g-gap)) calc(var(--rect-h) + var(--g-gap) + var(--l-h) + var(--l-gap)) / calc((var(--c-w) - (var(--c-s) + var(--g-gap))) * 0.6) var(--l-h) no-repeat;
+      --m: var(--ln) 0 0 / 100% var(--rect-h),
+            var(--circle) 0 calc(var(--rect-h) + var(--g-gap)) / var(--c-s) var(--c-s),
+            var(--ln) calc(var(--c-s) + var(--g-gap)) calc(var(--rect-h) + var(--g-gap)) / calc(((var(--c-w) - var(--c-p) * 2) - (var(--c-s) + var(--g-gap))) * 0.85) var(--l-h),
+            var(--ln) calc(var(--c-s) + var(--g-gap)) calc(var(--rect-h) + var(--g-gap) + var(--l-h) + var(--l-gap)) / calc(((var(--c-w) - var(--c-p) * 2) - (var(--c-s) + var(--g-gap))) * 0.6) var(--l-h);
       -webkit-mask: var(--m);
       mask: var(--m);
       -webkit-mask-repeat: no-repeat;
