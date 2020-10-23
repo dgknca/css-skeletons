@@ -161,7 +161,8 @@
     .skeleton.skeleton-card-2::before {
       background: linear-gradient(var(--f-l-c), var(--f-l-c)) 0 0/var(--f-l-w) var(--f-l-h) no-repeat, linear-gradient(var(--s-l-c), var(--s-l-c)) 0 calc(var(--f-l-h) + var(--s-l-m-t))/var(--s-l-w) var(--s-l-h) no-repeat, var(--bg); }
   .skeleton.skeleton-list {
-    --b: calc(var(--l-h) * 1.4);
+    --bullet-ratio: 1.4;
+    --b: calc(var(--l-h) * var(--bullet-ratio));
     --p: calc((var(--b) - var(--l-h)) / 2);
     height: calc(var(--b) + ((var(--b) + var(--l-gap)) * (var(--lines) - 1)) + var(--c-p) * 2); }
     .skeleton.skeleton-list::before, .skeleton.skeleton-list::after {

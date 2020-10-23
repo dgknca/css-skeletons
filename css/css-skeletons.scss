@@ -230,7 +230,8 @@
   }
 
   &#{&}-list {
-    --b: calc(var(--l-h) * 1.4);
+    --bullet-ratio: 1.4;
+    --b: calc(var(--l-h) * var(--bullet-ratio));
     --p: calc((var(--b) - var(--l-h)) / 2);
     height: calc(var(--b) + ((var(--b) + var(--l-gap)) * (var(--lines) - 1)) + var(--c-p) * 2);
     
