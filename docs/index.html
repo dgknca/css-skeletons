@@ -392,13 +392,28 @@
                 <td>
                   Bullet size depending on
                   <span class="prop inline">--l-h</span>. <br />
-                  <strong>Note that,</strong>must be equal or bigger than
+                  <strong>Note that,</strong> must be equal or bigger than
                   <span class="prop inline">--l-h</span>.
                 </td>
                 <td>1.4</td>
                 <td>
                   <div class="prop-wrp">
                     <a href="#.skeleton-list" class="class">.skeleton-list</a>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#--i-w" id="--tab-i-w" class="prop">--i-w</a>
+                </td>
+                <td>
+                  Width and height of
+                  <span class="class inline">.skeleton-image</span>
+                </td>
+                <td>250px</td>
+                <td>
+                  <div class="prop-wrp">
+                    <a href="#.skeleton-image" class="class">.skeleton-image</a>
                   </div>
                 </td>
               </tr>
@@ -1102,6 +1117,33 @@
             <div class="result">
               <div class="result__wrp">
                 <div class="skeleton skeleton-youtube"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="properties">
+          <span class="class" id=".skeleton-image">.skeleton-image</span>
+          <div class="prop-wrp">
+            <a href="#--tab-i-w" class="prop" id="--i-w">--i-w</a>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="box__wrp">
+            <pre><code class="code">&lt;div 
+  class="skeleton skeleton-image" 
+  style="
+    --i-w: 300px;
+    --c-bg: #f8f7fc;
+  "
+>&lt;/div></code></pre>
+            <div class="result">
+              <div class="result__wrp">
+                <div
+                  class="skeleton skeleton-image"
+                  style="--c-bg: #f8f7fc; --i-w: 300px"
+                ></div>
               </div>
             </div>
           </div>

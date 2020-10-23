@@ -186,3 +186,20 @@
       mask: var(--m);
       -webkit-mask-repeat: no-repeat;
       mask-repeat: no-repeat; }
+  .skeleton.skeleton-image {
+    --i-w: 250px;
+    height: var(--i-w);
+    width: var(--i-w);
+    --cw: calc((var(--i-w) - var(--c-p) * 2) / 12);
+    --ch: calc(var(--i-w) / 12);
+    --c-s: calc(var(--i-w) / 4); }
+    .skeleton.skeleton-image::before, .skeleton.skeleton-image::after {
+      --m: linear-gradient(to left top,#000 50%, transparent 50.5%) 0 100%/calc(var(--cw) * 2) calc(var(--ch) * 4),
+           linear-gradient(to right top,#000 50%, transparent 50.5%) calc(var(--cw) * 2) 100%/calc(var(--cw) * 2) calc(var(--ch) * 4),
+           linear-gradient(to left top,#000 50%, transparent 50.5%) calc(var(--cw) * 4) 100%/calc(var(--cw) * 4) calc(var(--ch) * 6),
+           linear-gradient(to right top,#000 50%, transparent 50.5%) calc(var(--cw) * 8) 100%/calc(var(--cw) * 4) calc(var(--ch) * 6),
+           var(--circle) left calc(var(--i-w) / 8) top calc(var(--i-w) / 8) / var(--c-s) var(--c-s);
+      -webkit-mask: var(--m);
+      mask: var(--m);
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat; }
