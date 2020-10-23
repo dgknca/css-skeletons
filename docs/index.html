@@ -5,24 +5,106 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/highlight.min.css" />
-    <link rel="stylesheet" href="./assets/css/atom-one-dark.css" />
+    <link rel="stylesheet" href="./assets/css/atom-one-light.css" />
     <link rel="stylesheet" href="./assets/css/main.css" />
     <link rel="stylesheet" href="../css/css-skeletons.min.css" />
     <title>Single Div CSS Skeletons</title>
   </head>
   <body>
     <div class="container">
-      <header class="header"><h1>css-skeletons</h1></header>
+      <header class="header">
+        <!-- <div class="header__wrp">
+          <div
+            class="skeleton skeleton-line no-animate"
+            style="
+              --c-w: 150px;
+              --lines: 5;
+              --l-h: 10px;
+              --l-gap: 5px;
+              --c-bg: #f0f0f0;
+              --bg: #e0e0e0;
+            "
+          ></div>
+          <div
+            class="skeleton skeleton-youtube no-animate"
+            style="--c-bg: #f0f0f0; --bg: #e0e0e0"
+          ></div>
+          <div
+            class="skeleton skeleton-list no-animate"
+            style="--c-bg: #f0f0f0; --lines: 5; --c-w: 400px; --bg: #e0e0e0"
+          ></div>
+          <div
+            class="skeleton skeleton-circle-multi-line no-animate"
+            style="
+              --c-bg: #f0f0f0;
+              --lines: 3;
+              --c-w: 350px;
+              --c-s: 80px;
+              --bg: #e0e0e0;
+            "
+          ></div>
+          <div
+            class="skeleton skeleton-chart-line no-animate"
+            style="--c-bg: #f0f0f0; --c-w: 430px; --bg: #e0e0e0"
+          ></div>
+          <div
+            class="skeleton skeleton-chart-columns no-animate"
+            style="--c-bg: #d281d652; --c-w: 430px; --cols: 7; --bg: #c561a0"
+          ></div>
+          <div
+            class="skeleton skeleton-rect no-animate"
+            style="
+              --c-bg: #f0f0f0;
+              --c-w: 230px;
+              --rect-h: 120px;
+              --lines: 3;
+              --bg: #e0e0e0;
+            "
+          ></div>
+          <div
+            class="skeleton skeleton-card-1 no-animate"
+            style="
+              --c-bg: #f0f0f0;
+              --c-w: 680px;
+              --card-h: 150px;
+              --bg: #e0e0e0;
+            "
+          ></div>
+          <div
+            class="skeleton skeleton-card-2 no-animate"
+            style="
+              --c-bg: #f0f0f0;
+              --c-w: 680px;
+              --card-h: 150px;
+              --lines: 5;
+              --bg: #e0e0e0;
+            "
+          ></div>
+        </div> -->
+      </header>
+      <div class="logo"></div>
       <h2 class="site-title">
-        <span>Single Div</span>, <span>Fully Customizable</span> and
-        <span>Dynamic</span> CSS library.
+        <span>Single Div</span>, <span>Dynamic</span> and
+        <span>Fully Customizable</span> CSS library
       </h2>
+
+      <!-- <div class="github-btn">
+        <a
+          class="github-button"
+          href="https://github.com/dgknca/css-skeletons"
+          data-icon="octicon-star"
+          data-size="large"
+          data-show-count="true"
+          aria-label="Star dgknca/css-skeletons on GitHub"
+          >Star</a
+        >
+      </div> -->
       <section class="section">
         <h3>Custom Variables</h3>
         <table class="variables-table">
           <thead>
             <tr>
-              <th>Custom Variable</th>
+              <th>--Variable</th>
               <th>Description</th>
               <th>Default</th>
               <th>Valid Class</th>
@@ -379,9 +461,13 @@
         </div>
 
         <div class="box">
-          <pre><code class="code">&lt;div class="skeleton skeleton-line">&lt;/div></code></pre>
-          <div class="result">
-            <div class="skeleton skeleton-line"></div>
+          <div class="box__wrp">
+            <pre><code class="code">&lt;div class="skeleton skeleton-line">&lt;/div></code></pre>
+            <div class="result">
+              <div class="result__wrp">
+                <div class="skeleton skeleton-line"></div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -389,9 +475,16 @@
           If you want to change the default values, just send it in style="".
         </p>
         <div class="box">
-          <pre><code class="code">&lt;div class="skeleton skeleton-line" style="--l-h:40px;">&lt;/div></code></pre>
-          <div class="result">
-            <div class="skeleton skeleton-line" style="--l-h: 40px"></div>
+          <div class="box__wrp">
+            <pre><code class="code">&lt;div 
+  class="skeleton skeleton-line" 
+  style="--l-h:40px;"
+>&lt;/div></code></pre>
+            <div class="result">
+              <div class="result__wrp">
+                <div class="skeleton skeleton-line" style="--l-h: 40px"></div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -400,57 +493,110 @@
           the number of lines and other values.
         </p>
         <div class="box">
-          <pre><code class="code">&lt;div class="skeleton skeleton-line" style="--lines:3;--c-w:100%;">&lt;/div></code></pre>
-          <div class="result">
-            <div
-              class="skeleton skeleton-line"
-              style="--lines: 3; --c-w: 100%"
-            ></div>
+          <div class="box__wrp">
+            <pre><code class="code">&lt;div 
+  class="skeleton skeleton-line" 
+  style="
+    --lines: 3;
+    --c-w: 100%;
+  "
+>&lt;/div></code></pre>
+            <div class="result">
+              <div class="result__wrp">
+                <div
+                  class="skeleton skeleton-line"
+                  style="--lines: 3; --c-w: 100%"
+                ></div>
+              </div>
+            </div>
           </div>
         </div>
 
         <div class="box">
-          <pre><code class="code">&lt;div class="skeleton skeleton-line" style="--lines:3;--l-gap:20px;">&lt;/div></code></pre>
-          <div class="result">
-            <div
-              class="skeleton skeleton-line"
-              style="--lines: 3; --l-gap: 20px"
-            ></div>
+          <div class="box__wrp">
+            <pre><code class="code">&lt;div 
+  class="skeleton skeleton-line" 
+  style="
+    --lines: 3;
+    --l-gap: 20px;
+  "
+>&lt;/div></code></pre>
+            <div class="result">
+              <div class="result__wrp">
+                <div
+                  class="skeleton skeleton-line"
+                  style="--lines: 3; --l-gap: 20px"
+                ></div>
+              </div>
+            </div>
           </div>
         </div>
 
         <div class="box">
-          <pre><code class="code">&lt;div class="skeleton skeleton-line" style="--lines:3;--c-bg: #F8F7FC;">&lt;/div></code></pre>
-          <div class="result">
-            <div
-              class="skeleton skeleton-line"
-              style="--lines: 3; --c-bg: #f8f7fc"
-            ></div>
+          <div class="box__wrp">
+            <pre><code class="code">&lt;div 
+  class="skeleton skeleton-line" 
+  style="
+    --lines: 3;
+    --c-bg: #F8F7FC;
+  "
+>&lt;/div></code></pre>
+            <div class="result">
+              <div class="result__wrp">
+                <div
+                  class="skeleton skeleton-line"
+                  style="--lines: 3; --c-bg: #f8f7fc"
+                ></div>
+              </div>
+            </div>
           </div>
         </div>
 
         <div class="box">
-          <pre><code class="code">&lt;div class="skeleton skeleton-line" style="--lines:3;--c-bg:#faecf6;--bg:#eeb6e0;">&lt;/div></code></pre>
-          <div class="result">
-            <div
-              class="skeleton skeleton-line"
-              style="--lines: 3; --c-bg: #faecf6; --bg: #eeb6e0"
-            ></div>
+          <div class="box__wrp">
+            <pre><code class="code">&lt;div 
+  class="skeleton skeleton-line" 
+  style="
+    --lines: 3;
+    --c-bg: #faecf6;
+    --bg: #eeb6e0;
+  "
+>&lt;/div></code></pre>
+            <div class="result">
+              <div class="result__wrp">
+                <div
+                  class="skeleton skeleton-line"
+                  style="--lines: 3; --c-bg: #faecf6; --bg: #eeb6e0"
+                ></div>
+              </div>
+            </div>
           </div>
         </div>
 
         <div class="box">
-          <pre><code class="code">&lt;div class="skeleton skeleton-line" style="--lines:3;--c-bg:#faecf6;--bg:#eeb6e0;--shine:#f5c3da;">&lt;/div></code></pre>
-          <div class="result">
-            <div
-              class="skeleton skeleton-line"
-              style="
-                --lines: 3;
-                --c-bg: #faecf6;
-                --bg: #eeb6e0;
-                --shine: #f5c3da;
-              "
-            ></div>
+          <div class="box__wrp">
+            <pre><code class="code">&lt;div 
+  class="skeleton skeleton-line" 
+  style="
+    --lines: 3;
+    --c-bg: #faecf6;
+    --bg: #eeb6e0;
+    --shine: #f5c3da;
+  "
+>&lt;/div></code></pre>
+            <div class="result">
+              <div class="result__wrp">
+                <div
+                  class="skeleton skeleton-line"
+                  style="
+                    --lines: 3;
+                    --c-bg: #faecf6;
+                    --bg: #eeb6e0;
+                    --shine: #f5c3da;
+                  "
+                ></div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -458,7 +604,8 @@
           Are custom properties too long? You can store them in a class.
         </p>
         <div class="box">
-          <pre><code class="code">&lt;style>
+          <div class="box__wrp">
+            <pre><code class="code">&lt;style>
 .my-class {
     --lines: 3;
     --c-bg: #faecf6;
@@ -469,17 +616,20 @@
 &lt;/style>
 
 &lt;div class="skeleton skeleton-line my-class">&lt;/div></code></pre>
-          <div class="result">
-            <style>
-              .my-class {
-                --lines: 3;
-                --c-bg: #faecf6;
-                --c-p: 30px;
-                --bg: #eeb6e0;
-                --shine: #f5c3da;
-              }
-            </style>
-            <div class="skeleton skeleton-line my-class"></div>
+            <div class="result">
+              <div class="result__wrp">
+                <style>
+                  .my-class {
+                    --lines: 3;
+                    --c-bg: #faecf6;
+                    --c-p: 30px;
+                    --bg: #eeb6e0;
+                    --shine: #f5c3da;
+                  }
+                </style>
+                <div class="skeleton skeleton-line my-class"></div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -499,22 +649,43 @@
           <span class="class inline">.skeleton-rect</span> class.
         </p>
         <div class="box">
-          <pre><code class="code">&lt;div class="skeleton skeleton-rect" style="--rect-h:150px;--lines:3;">&lt;/div></code></pre>
-          <div class="result">
-            <div
-              class="skeleton skeleton-rect"
-              style="--rect-h: 150px; --lines: 3"
-            ></div>
+          <div class="box__wrp">
+            <pre><code class="code">&lt;div 
+  class="skeleton skeleton-rect" 
+  style="
+    --rect-h: 150px;
+    --lines: 3;
+  "
+>&lt;/div></code></pre>
+            <div class="result">
+              <div class="result__wrp">
+                <div
+                  class="skeleton skeleton-rect"
+                  style="--rect-h: 150px; --lines: 3"
+                ></div>
+              </div>
+            </div>
           </div>
         </div>
 
         <div class="box">
-          <pre><code class="code">&lt;div class="skeleton skeleton-rect" style="--rect-h:100px;--lines:2;--g-gap:30px;">&lt;/div></code></pre>
-          <div class="result">
-            <div
-              class="skeleton skeleton-rect"
-              style="--lines: 2; --rect-h: 100px; --g-gap: 30px"
-            ></div>
+          <div class="box__wrp">
+            <pre><code class="code">&lt;div 
+  class="skeleton skeleton-rect" 
+  style="
+    --rect-h: 100px;
+    --lines: 2;
+    --g-gap: 30px;
+  "
+>&lt;/div></code></pre>
+            <div class="result">
+              <div class="result__wrp">
+                <div
+                  class="skeleton skeleton-rect"
+                  style="--lines: 2; --rect-h: 100px; --g-gap: 30px"
+                ></div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -529,9 +700,16 @@
         <p class="description">Simple circle.</p>
 
         <div class="box">
-          <pre><code class="code">&lt;div class="skeleton skeleton-circle" style="--c-s: 60px;">&lt;/div></code></pre>
-          <div class="result">
-            <div class="skeleton skeleton-circle" style="--c-s: 60px"></div>
+          <div class="box__wrp">
+            <pre><code class="code">&lt;div 
+  class="skeleton skeleton-circle" 
+  style="--c-s: 60px;"
+>&lt;/div></code></pre>
+            <div class="result">
+              <div class="result__wrp">
+                <div class="skeleton skeleton-circle" style="--c-s: 60px"></div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -553,19 +731,37 @@
         <p class="description">Side by side circle and line.</p>
 
         <div class="box">
-          <pre><code class="code">&lt;div class="skeleton skeleton-circle-line">&lt;/div></code></pre>
-          <div class="result">
-            <div class="skeleton skeleton-circle-line"></div>
+          <div class="box__wrp">
+            <pre><code class="code">&lt;div 
+  class="skeleton skeleton-circle-line"
+>&lt;/div></code></pre>
+            <div class="result">
+              <div class="result__wrp">
+                <div class="skeleton skeleton-circle-line"></div>
+              </div>
+            </div>
           </div>
         </div>
 
         <div class="box">
-          <pre><code class="code">&lt;div class="skeleton skeleton-circle-line" style="--c-w:500px;--c-s:60px;--l-h: 30px;--g-gap:30px;">&lt;/div></code></pre>
-          <div class="result">
-            <div
-              class="skeleton skeleton-circle-line"
-              style="--c-w: 500px; --c-s: 60px; --l-h: 30px; --g-gap: 30px"
-            ></div>
+          <div class="box__wrp">
+            <pre><code class="code">&lt;div 
+  class="skeleton skeleton-circle-line" 
+  style="
+    --c-w: 500px;
+    --c-s: 60px;
+    --l-h: 30px;
+    --g-gap: 30px;
+  "
+>&lt;/div></code></pre>
+            <div class="result">
+              <div class="result__wrp">
+                <div
+                  class="skeleton skeleton-circle-line"
+                  style="--c-w: 500px; --c-s: 60px; --l-h: 30px; --g-gap: 30px"
+                ></div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -594,12 +790,25 @@
         </p>
 
         <div class="box">
-          <pre><code class="code">&lt;div class="skeleton skeleton-circle-multi-line" style="--c-s:80px;--lines:4;">&lt;/div></code></pre>
-          <div class="result">
-            <div
-              class="skeleton skeleton-circle-multi-line"
-              style="--c-s: 80px; --lines: 4"
-            ></div>
+          <div class="box__wrp">
+            <pre><code class="code">&lt;div 
+  class="
+    skeleton 
+    skeleton-circle-multi-line
+  " 
+  style="
+    --c-s: 80px;
+    --lines: 4;
+  "
+>&lt;/div></code></pre>
+            <div class="result">
+              <div class="result__wrp">
+                <div
+                  class="skeleton skeleton-circle-multi-line"
+                  style="--c-s: 80px; --lines: 4"
+                ></div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -616,12 +825,23 @@
         </p>
 
         <div class="box">
-          <pre><code class="code">&lt;div class="skeleton skeleton-circle-multi-line adapt-to-circle" style="--c-s:150px;">&lt;/div></code></pre>
-          <div class="result">
-            <div
-              class="skeleton skeleton-circle-multi-line adapt-to-circle"
-              style="--c-s: 150px"
-            ></div>
+          <div class="box__wrp">
+            <pre><code class="code">&lt;div 
+  class="
+    skeleton 
+    skeleton-circle-multi-line 
+    adapt-to-circle
+  " 
+  style="--c-s: 50px;"
+>&lt;/div></code></pre>
+            <div class="result">
+              <div class="result__wrp">
+                <div
+                  class="skeleton skeleton-circle-multi-line adapt-to-circle"
+                  style="--c-s: 150px"
+                ></div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -655,19 +875,34 @@
         </p>
 
         <div class="box">
-          <pre><code class="code">&lt;div class="skeleton skeleton-chart-columns">&lt;/div></code></pre>
-          <div class="result">
-            <div class="skeleton skeleton-chart-columns"></div>
+          <div class="box__wrp">
+            <pre><code class="code">&lt;div class="skeleton skeleton-chart-columns">&lt;/div></code></pre>
+            <div class="result">
+              <div class="result__wrp">
+                <div class="skeleton skeleton-chart-columns"></div>
+              </div>
+            </div>
           </div>
         </div>
 
         <div class="box">
-          <pre><code class="code">&lt;div class="skeleton skeleton-chart-columns" style="--cols: 10;--col-w:30px;--col-gap:20px;">&lt;/div></code></pre>
-          <div class="result">
-            <div
-              class="skeleton skeleton-chart-columns"
-              style="--cols: 10; --col-w: 30px; --col-gap: 20px"
-            ></div>
+          <div class="box__wrp">
+            <pre><code class="code">&lt;div 
+  class="skeleton skeleton-chart-columns" 
+  style="
+    --cols: 10;
+    --col-w: 30px;
+    --col-gap: 20px;
+  "
+>&lt;/div></code></pre>
+            <div class="result">
+              <div class="result__wrp">
+                <div
+                  class="skeleton skeleton-chart-columns"
+                  style="--cols: 10; --col-w: 30px; --col-gap: 20px"
+                ></div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -688,22 +923,40 @@
         </div>
 
         <div class="box">
-          <pre><code class="code">&lt;div class="skeleton skeleton-chart-line" style="--c-w: 500px;">&lt;/div></code></pre>
-          <div class="result">
-            <div
-              class="skeleton skeleton-chart-line"
-              style="--c-w: 500px"
-            ></div>
+          <div class="box__wrp">
+            <pre><code class="code">&lt;div 
+  class="skeleton skeleton-chart-line" 
+  style="--c-w: 500px;"
+>&lt;/div></code></pre>
+            <div class="result">
+              <div class="result__wrp">
+                <div
+                  class="skeleton skeleton-chart-line"
+                  style="--c-w: 500px"
+                ></div>
+              </div>
+            </div>
           </div>
         </div>
 
         <div class="box">
-          <pre><code class="code">&lt;div class="skeleton skeleton-chart-line" style="--c-w: 400px;--chart-h: 150px;--chart-btm:60px;">&lt;/div></code></pre>
-          <div class="result">
-            <div
-              class="skeleton skeleton-chart-line"
-              style="--c-w: 400px; --chart-h: 150px; --chart-btm: 60px"
-            ></div>
+          <div class="box__wrp">
+            <pre><code class="code">&lt;div 
+  class="skeleton skeleton-chart-line" 
+  style="
+    --c-w: 400px;
+    --chart-h: 150px;
+    --chart-btm: 60px;
+  "
+>&lt;/div></code></pre>
+            <div class="result">
+              <div class="result__wrp">
+                <div
+                  class="skeleton skeleton-chart-line"
+                  style="--c-w: 400px; --chart-h: 150px; --chart-btm: 60px"
+                ></div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -729,9 +982,19 @@
         </p>
 
         <div class="box">
-          <pre><code class="code">&lt;div class="skeleton skeleton-card-1" style="--c-w: 600px;">&lt;/div></code></pre>
-          <div class="result">
-            <div class="skeleton skeleton-card-1" style="--c-w: 600px"></div>
+          <div class="box__wrp">
+            <pre><code class="code">&lt;div 
+  class="skeleton skeleton-card-1" 
+  style="--c-w: 600px;"
+>&lt;/div></code></pre>
+            <div class="result">
+              <div class="result__wrp">
+                <div
+                  class="skeleton skeleton-card-1"
+                  style="--c-w: 600px"
+                ></div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -768,12 +1031,22 @@
         </div>
 
         <div class="box">
-          <pre><code class="code">&lt;div class="skeleton skeleton-card-2" style="--c-w: 600px;--lines:3;">&lt;/div></code></pre>
-          <div class="result">
-            <div
-              class="skeleton skeleton-card-2"
-              style="--c-w: 600px; --lines: 3"
-            ></div>
+          <div class="box__wrp">
+            <pre><code class="code">&lt;div 
+  class="skeleton skeleton-card-2" 
+  style="
+    --c-w: 600px;
+    --lines: 3;
+  "
+>&lt;/div></code></pre>
+            <div class="result">
+              <div class="result__wrp">
+                <div
+                  class="skeleton skeleton-card-2"
+                  style="--c-w: 600px; --lines: 3"
+                ></div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -788,12 +1061,22 @@
         </div>
 
         <div class="box">
-          <pre><code class="code">&lt;div class="skeleton skeleton-list" style="--lines:5;--c-w:100%;">&lt;/div></code></pre>
-          <div class="result">
-            <div
-              class="skeleton skeleton-list"
-              style="--lines: 5; --c-w: 100%"
-            ></div>
+          <div class="box__wrp">
+            <pre><code class="code">&lt;div 
+  class="skeleton skeleton-list" 
+  style="
+    --lines: 5;
+    --c-w: 100%;
+  "
+>&lt;/div></code></pre>
+            <div class="result">
+              <div class="result__wrp">
+                <div
+                  class="skeleton skeleton-list"
+                  style="--lines: 5; --c-w: 100%"
+                ></div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -815,15 +1098,20 @@
         </div>
 
         <div class="box">
-          <pre><code class="code">&lt;div class="skeleton skeleton-youtube">&lt;/div></code></pre>
-          <div class="result">
-            <div class="skeleton skeleton-youtube"></div>
+          <div class="box__wrp">
+            <pre><code class="code">&lt;div class="skeleton skeleton-youtube">&lt;/div></code></pre>
+            <div class="result">
+              <div class="result__wrp">
+                <div class="skeleton skeleton-youtube"></div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
     </div>
 
     <script src="./assets/js/highlight.pack.js"></script>
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
     <script>
       hljs.initHighlightingOnLoad()
     </script>

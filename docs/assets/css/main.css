@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Noto+Sans:wght@400;700&family=Poppins:wght@400;700&display=swap');
 
+:root {
+  --site-width: 1200px;
+}
+
 ::selection {
   background: rgba(0, 0, 0, 0.1);
 }
@@ -7,6 +11,7 @@
 html,
 body {
   width: 100%;
+  overflow-x: hidden;
 }
 
 html {
@@ -15,7 +20,7 @@ html {
 }
 
 body {
-  background: #f5f6fa;
+  background: #fff;
 }
 
 * {
@@ -72,23 +77,11 @@ a:visited {
   text-decoration: none;
 }
 
-.header {
-  width: 100vw;
-  left: 0;
-  position: absolute;
-  top: 0;
-  height: 50vh;
-  background: #000;
-  display: none;
-}
-
 .container {
-  max-width: 1000px;
+  max-width: var(--site-width);
   width: 100%;
   margin: 0 auto;
   padding: 20px;
-  background: #fff;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
 .section {
@@ -96,24 +89,44 @@ a:visited {
 }
 
 .box {
-  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.2));
   overflow: hidden;
   margin-top: 10px;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
 }
 
 .box + .box {
   margin-top: 30px;
 }
 
+.box__wrp {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 10px 0;
+  max-width: var(--site-width);
+  width: 100%;
+  margin: 0 auto;
+}
+
 .code {
   font-family: 'Fira Code', monospace;
   padding: 20px;
   line-height: 1.4;
-  border-radius: 20px 20px 0 0;
+  border-radius: 3px;
+  background: #f9fcfa;
+  border: 1px solid #e0e2e1;
+  margin-right: 50px;
+}
+
+pre,
+code {
+  flex: 1;
 }
 
 .code *::selection {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.2);
 }
 
 .code::-webkit-scrollbar {
@@ -133,9 +146,16 @@ a:visited {
 }
 
 .result {
-  padding: 20px;
-  background: #fff;
-  border-radius: 0 0 20px 20px;
+  max-width: 500px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.result__wrp {
+  width: min-content;
+  min-width: 300px;
+  flex-shrink: 0;
 }
 
 .description {
@@ -219,6 +239,10 @@ td .prop {
   margin: 0;
 }
 
+.hljs {
+  background: #f9f9f9;
+}
+
 .hljs-attribute,
 .hljs-doctag,
 .hljs-keyword,
@@ -230,17 +254,17 @@ td .prop {
 
 .hljs-name,
 .hljs-selector-class {
-  color: hsl(338, 85%, 74%);
+  color: #8a31b9;
 }
 
 .hljs-attr,
 .hljs-attribute {
-  color: hsl(39, 100%, 95%);
+  color: #da103f;
 }
 
 .hljs-string,
 .hljs-number {
-  color: hsl(44, 74%, 68%);
+  color: #1d8991;
 }
 
 table th {
@@ -262,4 +286,9 @@ table th {
 
 .variables-table tr td:nth-child(4) {
   padding: 20px 15px;
+}
+
+.github-btn {
+  display: flex;
+  justify-content: center;
 }
