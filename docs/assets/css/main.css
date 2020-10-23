@@ -39,15 +39,18 @@ h3 {
 }
 
 .site-title > span:nth-child(1) {
-  background: linear-gradient(#87f5fb, #87f5fb) 0 100%/100% 15px no-repeat;
+  background: linear-gradient(#87f5fb, #87f5fb) left 0 bottom 5px/100% 12px
+    no-repeat;
 }
 
 .site-title > span:nth-child(2) {
-  background: linear-gradient(#cee27d, #cee27d) 0 100%/100% 15px no-repeat;
+  background: linear-gradient(#cee27d, #cee27d) left 0 bottom 5px/100% 12px
+    no-repeat;
 }
 
 .site-title > span:nth-child(3) {
-  background: linear-gradient(#ff9faf, #ff9faf) 0 100%/100% 15px no-repeat;
+  background: linear-gradient(#ff9faf, #ff9faf) left 0 bottom 5px/100% 12px
+    no-repeat;
 }
 
 h2 {
@@ -67,14 +70,33 @@ h3 {
 }
 
 h4 {
-  font-size: 1.5rem;
-  font-weight: 400;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+h5 {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 900;
+  margin-top: 20px;
 }
 
 a,
 a:visited {
   color: royalblue;
   text-decoration: none;
+}
+
+.code-intro {
+  margin-top: 20px;
+  margin-right: 0 !important;
+}
+
+.or {
+  display: block;
+  font-weight: 900;
+  font-size: 1rem;
+  margin: 20px 0px;
 }
 
 .container {
@@ -91,8 +113,6 @@ a:visited {
 .box {
   overflow: hidden;
   margin-top: 10px;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
 }
 
 .box + .box {
@@ -101,13 +121,9 @@ a:visited {
 
 .box__wrp {
   display: flex;
-  justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
   padding: 10px 0;
-  max-width: var(--site-width);
-  width: 100%;
-  margin: 0 auto;
 }
 
 .code {
@@ -118,6 +134,14 @@ a:visited {
   background: #f9fcfa;
   border: 1px solid #e0e2e1;
   margin-right: 50px;
+}
+
+.code-intro {
+  margin-top: 20px;
+}
+
+.code-intro .code {
+  margin-right: 0;
 }
 
 pre,
@@ -148,8 +172,7 @@ code {
 .result {
   max-width: 500px;
   width: 100%;
-  display: flex;
-  align-items: center;
+  overflow: auto;
 }
 
 .result__wrp {
@@ -172,8 +195,6 @@ code {
 }
 
 .class {
-  /* color: #400c21;
-    background: #ffbcf7; */
   color: #400c21 !important;
   background: #ffbcf793;
   padding: 5px;
@@ -267,6 +288,20 @@ td .prop {
   color: #1d8991;
 }
 
+.table-wrp {
+  width: 100%;
+  overflow: auto;
+}
+
+table {
+  width: 100%;
+  min-width: 750px;
+}
+
+thead {
+  min-width: 900px;
+}
+
 table th {
   text-align: left;
   font-weight: 700;
@@ -291,4 +326,41 @@ table th {
 .github-btn {
   display: flex;
   justify-content: center;
+  margin: 30px 0;
+}
+
+@media screen and (max-width: 991px) {
+  .box__wrp {
+    flex-direction: column;
+  }
+
+  .result {
+    max-width: unset;
+    margin: 10px auto;
+    justify-content: center;
+  }
+
+  pre {
+    width: 100%;
+  }
+
+  .code {
+    margin-right: 0;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+  }
+
+  h4 {
+    font-size: 1.1rem;
+  }
+
+  h5 {
+    font-size: 1.4rem;
+  }
 }
