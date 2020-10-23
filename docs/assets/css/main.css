@@ -176,7 +176,7 @@ code {
 }
 
 .result__wrp {
-  width: min-content;
+  width: 100%;
   min-width: 300px;
   flex-shrink: 0;
 }
