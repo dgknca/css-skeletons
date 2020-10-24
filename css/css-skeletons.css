@@ -160,6 +160,27 @@
       mask-repeat: no-repeat; }
     .skeleton.skeleton-card-2::before {
       background: linear-gradient(var(--f-l-c), var(--f-l-c)) 0 0/var(--f-l-w) var(--f-l-h) no-repeat, linear-gradient(var(--s-l-c), var(--s-l-c)) 0 calc(var(--f-l-h) + var(--s-l-m-t))/var(--s-l-w) var(--s-l-h) no-repeat, var(--bg); }
+  .skeleton.skeleton-card-3 {
+    --c-w: 100%;
+    --c-s: 50px;
+    --g-gap: 30px;
+    --f-l-w: 200px;
+    --f-l-h: 20px;
+    --s-l-w: 130px;
+    --s-l-h: 10px;
+    --l-h: 10px;
+    --lines: 3;
+    --s-l-m-t: 10px;
+    height: calc(var(--l-h) * var(--lines) + var(--l-gap) * (var(--lines) - 1) + var(--g-gap) + var(--c-s) + var(--f-l-h) + var(--s-l-h)); }
+    .skeleton.skeleton-card-3::before, .skeleton.skeleton-card-3::after {
+      --m: var(--circle) 0 0/var(--c-s) var(--c-s),
+          var(--ln) calc(var(--c-s) + var(--g-gap)) 0 / var(--f-l-w) var(--f-l-h),
+          var(--ln) calc(var(--c-s) + var(--g-gap)) calc(var(--f-l-h) + var(--s-l-m-t)) / var(--s-l-w) var(--s-l-h),
+          repeating-linear-gradient(#000 0 var(--l-h), transparent var(--l-h) calc(var(--l-h) + var(--l-gap))) 0 calc(var(--c-s) + var(--g-gap)) / 100% 100%;
+      -webkit-mask: var(--m);
+      mask: var(--m);
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat; }
   .skeleton.skeleton-list {
     --bullet-ratio: 1.4;
     --b: calc(var(--l-h) * var(--bullet-ratio));
