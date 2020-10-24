@@ -8,16 +8,10 @@
 
 ```html
 <!-- UNPKG -->
-<link
-  rel="stylesheet"
-  href="https://unpkg.com/css-skeletons@1.0.1/css/css-skeletons.min.css"
-/>
+<link rel="stylesheet" href="https://unpkg.com/css-skeletons@1.0.1/css/css-skeletons.min.css"/>
 
 <!-- JSDelivr -->
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/css-skeletons@1.0.1/css/css-skeletons.min.css"
-/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/css-skeletons@1.0.1/css/css-skeletons.min.css"/>
 ```
 
 or
@@ -31,6 +25,8 @@ npm i css-skeletons
 ```js
 import 'css-skeletons'
 ```
+
+## Examples
 
 A few example from [documentation](https://dgknca.github.io/css-skeletons/docs/index.html).
 
