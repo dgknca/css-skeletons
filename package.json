@@ -1,11 +1,17 @@
 {
   "name": "css-skeletons",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "",
   "main": "./css/css-skeletons.min.css",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [
+    "css content placeholder",
+    "css skeleton",
+    "css content loader",
+    "css loading"
+  ],
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
@@ -17,5 +23,9 @@
     "prettier": "^2.1.2"
   },
   "author": "Doğukan Çavuş",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dgknca/css-skeletons.git"
+  }
 }
