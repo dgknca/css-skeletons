@@ -13,8 +13,6 @@ README.md
 package-lock.json
 
 # Others
-css/css-skeletons.css
-css/css-skeletons.scss
 gulpfile.js
 
 

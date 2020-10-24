@@ -1,6 +1,6 @@
 {
   "name": "css-skeletons",
-  "version": "0.1.0",
+  "version": "1.0.1",
   "description": "",
   "main": "./css/css-skeletons.min.css",
   "scripts": {
@@ -16,6 +16,6 @@
     "gulp-sourcemaps": "^2.6.1",
     "prettier": "^2.1.2"
   },
-  "author": "",
+  "author": "Doğukan Çavuş",
   "license": "ISC"
 }

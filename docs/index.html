@@ -34,12 +34,13 @@
       <h3>Getting Started</h3>
 
       <h4>Use from CDN</h4>
-      <pre
-        class="code-intro"
-      ><code class="code js">&lt;link rel="stylesheet" href="https://unpkg.com/css-skeletons" /></code></pre>
-      <pre
-        class="code-intro"
-      ><code class="code">&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/css-skeletons" /></code></pre>
+      <pre class="code-intro"><code class="code js">&lt;!-- UNPKG -->
+&lt;link rel="stylesheet" href="https://unpkg.com/css-skeletons@0.0.1/css/css-skeletons.min.css" />
+
+or
+
+&lt;!-- JSDelivr -->
+&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/css-skeletons@0.0.1/css/css-skeletons.min.css" /></code></pre>
 
       <span class="or">Or</span>
       <h4>Install from NPM</h4>
@@ -414,8 +415,7 @@
                 <td>
                   Bullet size depending on
                   <span class="prop inline">--l-h</span>. <br />
-                  <strong>Note that,</strong> must be equal or bigger than
-                  <span class="prop inline">--l-h</span>.
+                  <strong>*Note that,</strong> must be equal or bigger than 1.
                 </td>
                 <td>1.4</td>
                 <td>
@@ -508,7 +508,8 @@
         </div>
 
         <p class="description">
-          If you want to change the default values, just send it in style="".
+          If you want to change the default values, you can override it easily
+          in style attribute.
         </p>
         <div class="box">
           <div class="box__wrp">
