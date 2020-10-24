@@ -1,5 +1,7 @@
 # Single div, dynamic, fully customizable CSS library.
 
+## Documentation
+
 [See full documentation](https://dgknca.github.io/css-skeletons/docs/index.html)
 
 ## Getting Started
