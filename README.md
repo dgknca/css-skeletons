@@ -2,7 +2,7 @@
 
 ## Documentation
 
-[See full documentation](https://dgknca.github.io/css-skeletons/docs/index.html)
+[See full documentation](https://dgknca.github.io/css-skeletons/docs/)
 
 ## Getting Started
 
@@ -30,7 +30,7 @@ import 'css-skeletons'
 
 ## Examples
 
-A few example from [documentation](https://dgknca.github.io/css-skeletons/docs/index.html).
+A few example from [documentation](https://dgknca.github.io/css-skeletons/docs/).
 
 ```html
 <div

@@ -1,6 +1,6 @@
 {
   "name": "css-skeletons",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "main": "./css/css-skeletons.min.css",
   "scripts": {
@@ -17,5 +17,5 @@
     "prettier": "^2.1.2"
   },
   "author": "Doğukan Çavuş",
-  "license": "ISC"
+  "license": "MIT"
 }
