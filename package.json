@@ -4,7 +4,7 @@
   "description": "",
   "main": "./css/css-skeletons.min.css",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy": "gh-pages -d demo"
   },
   "keywords": [
     "css content placeholder",
@@ -13,6 +13,7 @@
     "css loading"
   ],
   "devDependencies": {
+    "gh-pages": "^3.1.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
     "gulp-clean-css": "^4.3.0",
@@ -23,6 +24,7 @@
     "prettier": "^2.1.2"
   },
   "author": "Doğukan Çavuş",
+  "email" : "dgknca@gmail.com",
   "license": "MIT",
   "repository": {
     "type": "git",
