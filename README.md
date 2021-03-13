@@ -2,7 +2,7 @@
 
 ## Documentation
 
-[See full documentation](https://dgknca.github.io/css-skeletons/docs/)
+[See full documentation](https://dgknca.github.io/css-skeletons)
 
 ## Getting Started
 
@@ -30,7 +30,7 @@ import 'css-skeletons'
 
 ## Examples
 
-A few example from [documentation](https://dgknca.github.io/css-skeletons/docs/).
+A few example from [documentation](https://dgknca.github.io/css-skeletons).
 
 ```html
 <div
@@ -43,13 +43,13 @@ A few example from [documentation](https://dgknca.github.io/css-skeletons/docs/)
 ></div>
 ```
 
-![example 1](./docs/assets/img/skeleton-line.png)
+![example 1](./demo/assets/img/skeleton-line.png)
 
 ```html
 <div class="skeleton skeleton-card-3"></div>
 ```
 
-![example 2](./docs/assets/img/skeleton-card-3.png)
+![example 2](./demo/assets/img/skeleton-card-3.png)
 
 ```html
 <div
@@ -64,4 +64,4 @@ A few example from [documentation](https://dgknca.github.io/css-skeletons/docs/)
 ></div>
 ```
 
-![example 3](./docs/assets/img/skeleton-list.png)
+![example 3](./demo/assets/img/skeleton-list.png)
