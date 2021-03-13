@@ -1,0 +1,1239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/highlight.min.css" />
+    <link rel="stylesheet" href="./assets/css/atom-one-light.css" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="../css/css-skeletons.min.css" />
+    <title>Single Div CSS Skeletons</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2 class="site-title">
+        <span>Single Div</span>, <span>Dynamic</span> and
+        <span>Fully Customizable</span> CSS library
+      </h2>
+
+      <h5>No SVG, No Image. (11.2 Kb)</h5>
+
+      <div class="github-btn">
+        <a
+          class="github-button"
+          href="https://github.com/dgknca/css-skeletons"
+          data-icon="octicon-star"
+          data-size="large"
+          data-show-count="true"
+          aria-label="Star dgknca/css-skeletons on GitHub"
+          >Star</a
+        >
+      </div>
+
+      <h3>Getting Started</h3>
+
+      <h4>Use from CDN</h4>
+      <pre class="code-intro"><code class="code js">&lt;!-- UNPKG -->
+&lt;link rel="stylesheet" href="https://unpkg.com/css-skeletons@1.0.3/css/css-skeletons.min.css" />
+
+or
+
+&lt;!-- JSDelivr -->
+&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/css-skeletons@1.0.3/css/css-skeletons.min.css" /></code></pre>
+
+      <span class="or">Or</span>
+      <h4>Install from NPM</h4>
+      <pre
+        class="code-intro"
+      ><code class="code js">npm i css-skeletons</code></pre>
+      <pre
+        class="code-intro"
+      ><code class="code">import 'css-skeletons'</code></pre>
+
+      <section class="section">
+        <h3>Custom Variables</h3>
+        <div class="table-wrp">
+          <table class="variables-table">
+            <thead>
+              <tr>
+                <th>Variable</th>
+                <th>Description</th>
+                <th>Default</th>
+                <th>Valid Class</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <a href="#--c-w" id="--tab-c-w" class="prop">--c-w</a>
+                </td>
+                <td>Container width.</td>
+                <td>300px</td>
+                <td rowspan="6" class="td-all">Valid For All</td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#--c-p" id="--tab-c-p" class="prop">--c-p</a>
+                </td>
+                <td>Container padding.</td>
+                <td>10px</td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#--c-bg" id="--tab-c-bg" class="prop">--c-bg</a>
+                </td>
+                <td>Container background.</td>
+                <td>transparent</td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#--bg" id="--tab-bg" class="prop">--bg</a>
+                </td>
+                <td>Shapes background.</td>
+                <td>#e2e1eb</td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#--shine" id="--tab-shine" class="prop">--shine</a>
+                </td>
+                <td>Shine animation color.</td>
+                <td>rgba(255,255,255, 0.2)</td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#--t" id="--tab-t" class="prop">--t</a>
+                </td>
+                <td>Shine animation duration.</td>
+                <td>2s</td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#--lines" id="--tab-lines" class="prop">--lines</a>
+                </td>
+                <td>Lines count.</td>
+                <td>1</td>
+                <td>
+                  <div class="prop-wrp">
+                    <a href="#.skeleton-line" class="class">.skeleton-line</a>
+                    <a href="#.skeleton-rect" class="class">.skeleton-rect</a>
+                    <a href="#.skeleton-circle-multi-line" class="class"
+                      >.skeleton-circle-multi-line</a
+                    >
+                    <a href="#.skeleton-card-2" class="class"
+                      >.skeleton-card-2</a
+                    >
+                    <a href="#.skeleton-card-3" class="class"
+                      >.skeleton-card-3</a
+                    >
+                    <a href="#.skeleton-list" class="class">.skeleton-list</a>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#--l-h" id="--tab-l-h" class="prop">--l-h</a>
+                </td>
+                <td>Line height.</td>
+                <td>20px</td>
+                <td rowspan="2">
+                  <div class="prop-wrp">
+                    <a href="#.skeleton-line" class="class">.skeleton-line</a>
+                    <a href="#.skeleton-rect" class="class">.skeleton-rect</a>
+                    <a href="#.skeleton-circle-multi-line" class="class"
+                      >.skeleton-circle-multi-line</a
+                    >
+                    <a href="#.skeleton-card-2" class="class"
+                      >.skeleton-card-2</a
+                    >
+                    <a href="#.skeleton-card-3" class="class"
+                      >.skeleton-card-3</a
+                    >
+                    <a href="#.skeleton-list" class="class">.skeleton-list</a>
+                    <a href="#.skeleton-youtube" class="class"
+                      >.skeleton-youtube</a
+                    >
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#--l-gap" id="--tab-l-gap" class="prop">--l-gap</a>
+                </td>
+                <td>Gap between the lines.</td>
+                <td>10px</td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#--g-gap" id="--tab-g-gap" class="prop">--g-gap</a>
+                </td>
+                <td>Gap between the groups. E.g. circle and other lines.</td>
+                <td>15px</td>
+                <td>
+                  <div class="prop-wrp">
+                    <a href="#.skeleton-rect" class="class">.skeleton-rect</a>
+                    <a href="#.skeleton-circle-line" class="class"
+                      >.skeleton-circle-line</a
+                    >
+                    <a href="#.skeleton-circle-multi-line" class="class"
+                      >.skeleton-circle-multi-line</a
+                    >
+                    <a href="#.skeleton-card-1" class="class"
+                      >.skeleton-card-1</a
+                    >
+                    <a href="#.skeleton-card-2" class="class"
+                      >.skeleton-card-2</a
+                    >
+                    <a href="#.skeleton-card-3" class="class"
+                      >.skeleton-card-3</a
+                    >
+                    <a href="#.skeleton-list" class="class">.skeleton-list</a>
+                    <a href="#.skeleton-youtube" class="class"
+                      >.skeleton-youtube</a
+                    >
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#--c-s" id="--tab-c-s" class="prop">--c-s</a>
+                </td>
+                <td>Circle size.</td>
+                <td>40px</td>
+                <td>
+                  <div class="prop-wrp">
+                    <a href="#.skeleton-circle" class="class"
+                      >.skeleton-circle</a
+                    >
+                    <a href="#.skeleton-circle-line" class="class"
+                      >.skeleton-circle-line</a
+                    >
+                    <a href="#.skeleton-circle-multi-line" class="class"
+                      >.skeleton-circle-multi-line</a
+                    >
+                    <a href="#.skeleton-card-1" class="class"
+                      >.skeleton-card-1</a
+                    >
+                    <a href="#.skeleton-card-3" class="class"
+                      >.skeleton-card-3</a
+                    >
+                    <a href="#.skeleton-youtube" class="class"
+                      >.skeleton-youtube</a
+                    >
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#--c-pos" id="--tab-c-pos" class="prop">--c-pos</a>
+                </td>
+                <td>Circle position.</td>
+                <td>center (can be top, bottom, center or percent value)</td>
+                <td>
+                  <div class="prop-wrp">
+                    <a href="#.skeleton-circle-line" class="class"
+                      >.skeleton-circle-line</a
+                    >
+                    <a href="#.skeleton-circle-multi-line" class="class"
+                      >.skeleton-circle-multi-line</a
+                    >
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#--rect-h" id="--tab-rect-h" class="prop"
+                    >--rect-h</a
+                  >
+                </td>
+                <td>Rectangle height.</td>
+                <td>80px</td>
+                <td>
+                  <div class="prop-wrp">
+                    <a href="#.skeleton-rect" class="class">.skeleton-rect</a>
+                    <a href="#.skeleton-youtube" class="class"
+                      >.skeleton-youtube</a
+                    >
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#--chart-h" id="--tab-chart-h" class="prop"
+                    >--chart-h</a
+                  >
+                </td>
+                <td>Chart height.</td>
+                <td>200px</td>
+                <td>
+                  <div class="prop-wrp">
+                    <a href="#.skeleton-chart-columns" class="class"
+                      >.skeleton-chart-columns</a
+                    >
+                    <a href="#.skeleton-chart-line" class="class"
+                      >.skeleton-chart-line</a
+                    >
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#--chart-btm" id="--tab-chart-btm" class="prop"
+                    >--chart-btm</a
+                  >
+                </td>
+                <td>Chart bottom height.</td>
+                <td>40px</td>
+                <td>
+                  <div class="prop-wrp">
+                    <a href="#.skeleton-chart-line" class="class"
+                      >.skeleton-chart-line</a
+                    >
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#--cols" id="--tab-cols" class="prop">--cols</a>
+                </td>
+                <td>Columns count.</td>
+                <td>5 (Max 10)</td>
+                <td rowspan="3">
+                  <div class="prop-wrp">
+                    <a href="#.skeleton-chart-columns" class="class"
+                      >.skeleton-chart-columns</a
+                    >
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#--col-w" id="--tab-col-w" class="prop">--col-w</a>
+                </td>
+                <td>Column width.</td>
+                <td>25px</td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#--col-gap" id="--tab-col-gap" class="prop"
+                    >--col-gap</a
+                  >
+                </td>
+                <td>Gap between columns.</td>
+                <td>25px</td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#--card-h" id="--tab-card-h" class="prop"
+                    >--card-h</a
+                  >
+                </td>
+                <td>Card height.</td>
+                <td>150px</td>
+                <td>
+                  <div class="prop-wrp">
+                    <a href="#.skeleton-card-1" class="class"
+                      >.skeleton-card-1</a
+                    >
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#--f-l-w" id="--tab-f-l-w" class="prop">--f-l-w</a>
+                </td>
+                <td>First line width.</td>
+                <td>90%</td>
+                <td rowspan="5">
+                  <div class="prop-wrp">
+                    <a href="#.skeleton-card-2" class="class"
+                      >.skeleton-card-2</a
+                    >
+                    <a href="#.skeleton-card-3" class="class"
+                      >.skeleton-card-3</a
+                    >
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#--f-l-h" id="--tab-f-l-h" class="prop">--f-l-h</a>
+                </td>
+                <td>First line height.</td>
+                <td>25px</td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#--s-l-w" id="--tab-s-l-w" class="prop">--s-l-w</a>
+                </td>
+                <td>Second line width.</td>
+                <td>70%</td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#--s-l-h" id="--tab-s-l-h" class="prop">--s-l-h</a>
+                </td>
+                <td>Second line height.</td>
+                <td>20px</td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#--s-l-m-t" id="--tab-s-l-m-t" class="prop"
+                    >--s-l-m-t</a
+                  >
+                </td>
+                <td>Second line margin-top.</td>
+                <td>15px</td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#--f-l-c" id="--tab-f-l-c" class="prop">--f-l-c</a>
+                </td>
+                <td>First line color.</td>
+                <td>#e2e1eb</td>
+                <td rowspan="2">
+                  <div class="prop-wrp">
+                    <a href="#.skeleton-card-2" class="class"
+                      >.skeleton-card-2</a
+                    >
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#--s-l-c" id="--tab-s-l-c" class="prop">--s-l-c</a>
+                </td>
+                <td>Second line color.</td>
+                <td>#e2e1eb</td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#--bullet-ratio" id="--tab-bullet-ratio" class="prop"
+                    >--bullet-ratio</a
+                  >
+                </td>
+                <td>
+                  Bullet size depending on
+                  <span class="prop inline">--l-h</span>. <br />
+                  <strong>*Note that,</strong> must be equal or bigger than 1.
+                </td>
+                <td>1.4</td>
+                <td>
+                  <div class="prop-wrp">
+                    <a href="#.skeleton-list" class="class">.skeleton-list</a>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#--i-w" id="--tab-i-w" class="prop">--i-w</a>
+                </td>
+                <td>
+                  Width and height of
+                  <span class="class inline">.skeleton-image</span>
+                </td>
+                <td>250px</td>
+                <td>
+                  <div class="prop-wrp">
+                    <a href="#.skeleton-image" class="class">.skeleton-image</a>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h3>Helper Classes</h3>
+        <div class="table-wrp">
+          <table class="classes-table">
+            <thead>
+              <tr>
+                <th style="width: 20%">Class</th>
+                <th style="width: 30%">Description</th>
+                <th style="width: 20%">Required Class</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <a href="#.adapt-to-circle"
+                    ><span class="class">.adapt-to-circle</span></a
+                  >
+                </td>
+                <td>
+                  No <span class="prop">--lines</span> needed. Just need to set
+                  <span class="prop">--c-s</span> (circle-size). The lines will
+                  be produced and placed automatically based on the size of the
+                  circle.
+                </td>
+                <td>
+                  <div class="prop-wrp">
+                    <span class="class">.skeleton-circle-multi-line</span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td><span class="class">.no-animate</span></td>
+                <td>Cancels the animation.</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="section">
+        <h3>Examples</h3>
+        <div class="properties">
+          <span class="class" id=".skeleton-line">.skeleton-line</span>
+          <div class="prop-wrp">
+            <a href="#--tab-l-h" class="prop" id="--l-h">--l-h</a>
+          </div>
+          <div class="prop-wrp">
+            <a href="#--tab-lines" class="prop" id="--lines">--lines</a>
+          </div>
+          <div class="prop-wrp">
+            <a href="#--tab-l-gap" class="prop" id="--l-gap">--l-gap</a>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="box__wrp">
+            <pre><code class="code">&lt;div class="skeleton skeleton-line">&lt;/div></code></pre>
+            <div class="result">
+              <div class="result__wrp">
+                <div class="skeleton skeleton-line"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p class="description">
+          If you want to change the default values, you can override it easily
+          in style attribute.
+        </p>
+        <div class="box">
+          <div class="box__wrp">
+            <pre><code class="code">&lt;div 
+  class="skeleton skeleton-line" 
+  style="--l-h: 40px;"
+>&lt;/div></code></pre>
+            <div class="result">
+              <div class="result__wrp">
+                <div class="skeleton skeleton-line" style="--l-h: 40px"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p class="description">
+          No height needed. The height will be calculated automatically based on
+          the count of lines and other values.
+        </p>
+        <div class="box">
+          <div class="box__wrp">
+            <pre><code class="code">&lt;div 
+  class="skeleton skeleton-line" 
+  style="
+    --lines: 3;
+    --c-w: 100%;
+  "
+>&lt;/div></code></pre>
+            <div class="result">
+              <div class="result__wrp">
+                <div
+                  class="skeleton skeleton-line"
+                  style="--lines: 3; --c-w: 100%"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="box__wrp">
+            <pre><code class="code">&lt;div 
+  class="skeleton skeleton-line" 
+  style="
+    --lines: 3;
+    --l-gap: 20px;
+  "
+>&lt;/div></code></pre>
+            <div class="result">
+              <div class="result__wrp">
+                <div
+                  class="skeleton skeleton-line"
+                  style="--lines: 3; --l-gap: 20px"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="box__wrp">
+            <pre><code class="code">&lt;div 
+  class="skeleton skeleton-line" 
+  style="
+    --lines: 4;
+    --c-bg: #F8F7FC;
+  "
+>&lt;/div></code></pre>
+            <div class="result">
+              <div class="result__wrp">
+                <div
+                  class="skeleton skeleton-line"
+                  style="--lines: 4; --c-bg: #f8f7fc"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="box__wrp">
+            <pre><code class="code">&lt;div 
+  class="skeleton skeleton-line" 
+  style="
+    --lines: 3;
+    --c-bg: #faecf6;
+    --bg: #eeb6e0;
+    --shine: #f5c3da;
+  "
+>&lt;/div></code></pre>
+            <div class="result">
+              <div class="result__wrp">
+                <div
+                  class="skeleton skeleton-line"
+                  style="
+                    --lines: 3;
+                    --c-bg: #faecf6;
+                    --bg: #eeb6e0;
+                    --shine: #f5c3da;
+                  "
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p class="description">
+          Are custom properties too long? You can store them in a class.
+        </p>
+        <div class="box">
+          <div class="box__wrp">
+            <pre><code class="code">&lt;style>
+.my-class {
+    --lines: 3;
+    --c-bg: #faecf6;
+    --c-p: 30px;
+    --bg: #eeb6e0;
+    --shine: #f5c3da;
+}
+&lt;/style>
+
+&lt;div class="skeleton skeleton-line my-class">&lt;/div></code></pre>
+            <div class="result">
+              <div class="result__wrp">
+                <style>
+                  .my-class {
+                    --lines: 3;
+                    --c-bg: #faecf6;
+                    --c-p: 30px;
+                    --bg: #eeb6e0;
+                    --shine: #f5c3da;
+                  }
+                </style>
+                <div class="skeleton skeleton-line my-class"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="properties">
+          <span class="class" id=".skeleton-rect">.skeleton-rect</span>
+          <div class="prop-wrp">
+            <a href="#--tab-rect-h" class="prop" id="--rect-h">--rect-h</a>
+          </div>
+          <div class="prop-wrp">
+            <a href="#--tab-g-gap" class="prop" id="--g-gap">--g-gap</a>
+          </div>
+        </div>
+        <p class="description">
+          You can add another big rectangle with
+          <span class="class inline">.skeleton-rect</span> class.
+        </p>
+        <div class="box">
+          <div class="box__wrp">
+            <pre><code class="code">&lt;div 
+  class="skeleton skeleton-rect" 
+  style="
+    --rect-h: 150px;
+    --lines: 3;
+  "
+>&lt;/div></code></pre>
+            <div class="result">
+              <div class="result__wrp">
+                <div
+                  class="skeleton skeleton-rect"
+                  style="--rect-h: 150px; --lines: 3"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="box__wrp">
+            <pre><code class="code">&lt;div 
+  class="skeleton skeleton-rect" 
+  style="
+    --rect-h: 100px;
+    --lines: 2;
+    --g-gap: 30px;
+  "
+>&lt;/div></code></pre>
+            <div class="result">
+              <div class="result__wrp">
+                <div
+                  class="skeleton skeleton-rect"
+                  style="--lines: 2; --rect-h: 100px; --g-gap: 30px"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="properties">
+          <span class="class" id=".skeleton-circle">.skeleton-circle</span>
+          <div class="prop-wrp">
+            <a href="#--tab-c-s" class="prop" id="--c-s">--c-s</a>
+          </div>
+        </div>
+
+        <p class="description">Simple circle.</p>
+
+        <div class="box">
+          <div class="box__wrp">
+            <pre><code class="code">&lt;div 
+  class="skeleton skeleton-circle" 
+  style="--c-s: 60px;"
+>&lt;/div></code></pre>
+            <div class="result">
+              <div class="result__wrp">
+                <div class="skeleton skeleton-circle" style="--c-s: 60px"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="properties">
+          <span class="class" id=".skeleton-circle-line"
+            >.skeleton-circle-line</span
+          >
+          <div class="prop-wrp">
+            <a href="#--tab-c-s" class="prop" id="--c-s">--c-s</a>
+          </div>
+          <div class="prop-wrp">
+            <a href="#--tab-c-pos" class="prop" id="--c-pos">--c-pos</a>
+          </div>
+          <div class="prop-wrp">
+            <a href="#--tab-l-h" class="prop">--l-h</a>
+          </div>
+          <div class="prop-wrp">
+            <a href="#--tab-g-gap" class="prop">--g-gap</a>
+          </div>
+        </div>
+
+        <p class="description">Side by side circle and line.</p>
+
+        <div class="box">
+          <div class="box__wrp">
+            <pre><code class="code">&lt;div 
+  class="skeleton skeleton-circle-line"
+>&lt;/div></code></pre>
+            <div class="result">
+              <div class="result__wrp">
+                <div class="skeleton skeleton-circle-line"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="box__wrp">
+            <pre><code class="code">&lt;div 
+  class="skeleton skeleton-circle-line" 
+  style="
+    --c-w: 500px;
+    --c-s: 60px;
+    --l-h: 30px;
+    --g-gap: 30px;
+  "
+>&lt;/div></code></pre>
+            <div class="result">
+              <div class="result__wrp">
+                <div
+                  class="skeleton skeleton-circle-line"
+                  style="--c-w: 500px; --c-s: 60px; --l-h: 30px; --g-gap: 30px"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="properties">
+          <span class="class" id=".skeleton-circle-multi-line"
+            >.skeleton-circle-multi-line</span
+          >
+          <div class="prop-wrp">
+            <a href="#--tab-c-s" class="prop" id="--c-s">--c-s</a>
+          </div>
+          <div class="prop-wrp">
+            <a href="#--tab-c-pos" class="prop" id="--c-pos">--c-pos</a>
+          </div>
+          <div class="prop-wrp">
+            <a href="#--tab-l-h" class="prop">--l-h</a>
+          </div>
+          <div class="prop-wrp">
+            <a href="#--tab-g-gap" class="prop">--lines</a>
+          </div>
+          <div class="prop-wrp">
+            <a href="#--tab-g-gap" class="prop">--g-gap</a>
+          </div>
+        </div>
+
+        <p class="description">
+          If you want to use multiple lines, you must use
+          <span class="class inline">.skeleton-circle-multi-line</span>
+          class. <br />
+          <strong>*Note that,</strong> the lines height must be bigger than the
+          circle height.
+        </p>
+
+        <div class="box">
+          <div class="box__wrp">
+            <pre><code class="code">&lt;div 
+  class="
+    skeleton 
+    skeleton-circle-multi-line
+  " 
+  style="
+    --c-s: 80px;
+    --c-pos: top;
+    --lines: 4;
+  "
+>&lt;/div></code></pre>
+            <div class="result">
+              <div class="result__wrp">
+                <div
+                  class="skeleton skeleton-circle-multi-line"
+                  style="--c-s: 80px; --lines: 4; --c-pos: top"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="properties">
+          <span class="class" id=".adapt-to-circle">.adapt-to-circle</span>
+        </div>
+
+        <p class="description">
+          Just set <span class="prop inline">--c-s</span> (circle-size). The
+          lines will be produced and placed automatically based on the size of
+          the circle.
+        </p>
+
+        <div class="box">
+          <div class="box__wrp">
+            <pre><code class="code">&lt;div 
+  class="
+    skeleton 
+    skeleton-circle-multi-line 
+    adapt-to-circle
+  " 
+  style="
+    --c-s: 150px;
+    --c-w: 450px;
+  "
+>&lt;/div></code></pre>
+            <div class="result">
+              <div class="result__wrp">
+                <div
+                  class="skeleton skeleton-circle-multi-line adapt-to-circle"
+                  style="--c-s: 150px; --c-w: 450px"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="properties">
+          <span class="class" id=".skeleton-chart-columns"
+            >.skeleton-chart-columns</span
+          >
+          <div class="prop-wrp">
+            <a href="#--tab-cols" class="prop" id="--cols">--cols</a>
+          </div>
+          <div class="prop-wrp">
+            <a href="#--tab-col-w" class="prop" id="--col-w">--col-w</a>
+          </div>
+          <div class="prop-wrp">
+            <a href="#--tab-col-gap" class="prop" id="--col-gap">--col-gap</a>
+          </div>
+          <div class="prop-wrp">
+            <a href="#--tab-chart-h" class="prop" id="--chart-h">--chart-h</a>
+          </div>
+        </div>
+
+        <p class="description">
+          You don't need to set
+          <span class="prop inline">--c-w</span> (container-width). The width
+          will be calculated automatically based on the count of columns and
+          size of columns gap.
+        </p>
+
+        <div class="box">
+          <div class="box__wrp">
+            <pre><code class="code">&lt;div class="skeleton skeleton-chart-columns">&lt;/div></code></pre>
+            <div class="result">
+              <div class="result__wrp">
+                <div class="skeleton skeleton-chart-columns"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="box__wrp">
+            <pre><code class="code">&lt;div 
+  class="skeleton skeleton-chart-columns" 
+  style="
+    --cols: 10;
+    --col-w: 30px;
+    --col-gap: 20px;
+  "
+>&lt;/div></code></pre>
+            <div class="result">
+              <div class="result__wrp">
+                <div
+                  class="skeleton skeleton-chart-columns"
+                  style="--cols: 10; --col-w: 30px; --col-gap: 20px"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="properties">
+          <span class="class" id=".skeleton-chart-line"
+            >.skeleton-chart-line</span
+          >
+          <div class="prop-wrp">
+            <a href="#--tab-chart-h" class="prop" id="--chart-h">--chart-h</a>
+          </div>
+          <div class="prop-wrp">
+            <a href="#--tab-chart-btm" class="prop" id="--chart-btm"
+              >--chart-btm</a
+            >
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="box__wrp">
+            <pre><code class="code">&lt;div 
+  class="skeleton skeleton-chart-line" 
+  style="--c-w: 500px;"
+>&lt;/div></code></pre>
+            <div class="result">
+              <div class="result__wrp">
+                <div
+                  class="skeleton skeleton-chart-line"
+                  style="--c-w: 500px"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="box__wrp">
+            <pre><code class="code">&lt;div 
+  class="skeleton skeleton-chart-line" 
+  style="
+    --c-w: 400px;
+    --chart-h: 150px;
+    --chart-btm: 60px;
+  "
+>&lt;/div></code></pre>
+            <div class="result">
+              <div class="result__wrp">
+                <div
+                  class="skeleton skeleton-chart-line"
+                  style="--c-w: 400px; --chart-h: 150px; --chart-btm: 60px"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="properties">
+          <span class="class" id=".skeleton-card-1">.skeleton-card-1</span>
+          <div class="prop-wrp">
+            <a href="#--tab-card-h" class="prop" id="--card-h">--card-h</a>
+            Default 150px
+          </div>
+          <div class="prop-wrp">
+            <a href="#--tab-g-gap" class="prop">--g-gap</a> Default 30px
+          </div>
+
+          <div class="prop-wrp">
+            <a href="#--tab-c-s" class="prop">--c-s</a> Default 30px
+          </div>
+        </div>
+
+        <p class="description">
+          Dimensions of the lines and the big rectangle will be calculated
+          automatically based on the
+          <span class="prop inline">--c-w</span> (container-width).
+        </p>
+
+        <div class="box">
+          <div class="box__wrp">
+            <pre><code class="code">&lt;div 
+  class="skeleton skeleton-card-1"
+  style="
+    --c-w: 500px;
+    --card-h: 120px;
+  "
+>&lt;/div></code></pre>
+            <div class="result">
+              <div class="result__wrp">
+                <div
+                  class="skeleton skeleton-card-1"
+                  style="--c-w: 500px; --card-h: 120px"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="properties">
+          <span class="class" id=".skeleton-card-2">.skeleton-card-2</span>
+          <div class="prop-wrp">
+            <a href="#--tab-f-l-w" class="prop" id="--f-l-w">--f-l-w</a>
+          </div>
+          <div class="prop-wrp">
+            <a href="#--tab-f-l-h" class="prop" id="--f-l-h">--f-l-h</a>
+          </div>
+          <div class="prop-wrp">
+            <a href="#--tab-f-l-c" class="prop" id="--f-l-c">--f-l-c</a>
+          </div>
+          <div class="prop-wrp">
+            <a href="#--tab-s-l-w" class="prop" id="--s-l-w">--s-l-w</a>
+          </div>
+          <div class="prop-wrp">
+            <a href="#--tab-s-l-h" class="prop" id="--s-l-h">--s-l-h</a>
+          </div>
+          <div class="prop-wrp">
+            <a href="#--tab-s-l-c" class="prop" id="--s-l-c">--s-l-c</a>
+          </div>
+          <div class="prop-wrp">
+            <a href="#--tab-s-l-m-t" class="prop" id="--s-l-m-t">--s-l-m-t</a>
+          </div>
+          <div class="prop-wrp">
+            <a href="#--tab-l-h" class="prop">--l-h</a>
+          </div>
+          <div class="prop-wrp">
+            <a href="#--tab-lines" class="prop">--lines</a> Max. 6
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="box__wrp">
+            <pre><code class="code">&lt;div 
+  class="skeleton skeleton-card-2" 
+  style="
+    --c-w: 500px;
+    --lines: 3;
+    --f-l-c: rgba(103,89,255,0.3);
+    --s-l-c: rgba(54,216,175,0.3);
+  "
+>&lt;/div></code></pre>
+            <div class="result">
+              <div class="result__wrp">
+                <div
+                  class="skeleton skeleton-card-2"
+                  style="
+                    --c-w: 500px;
+                    --lines: 3;
+                    --f-l-c: rgba(103, 89, 255, 0.3);
+                    --s-l-c: rgba(54, 216, 175, 0.3);
+                  "
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="properties">
+          <span class="class" id=".skeleton-card-3">.skeleton-card-3</span>
+          <div class="prop-wrp">
+            <a href="#--tab-c-s" class="prop">--c-s</a> Default 50px
+          </div>
+          <div class="prop-wrp">
+            <a href="#--tab-g-gap" class="prop">--g-gap</a> Default 30px
+          </div>
+          <div class="prop-wrp">
+            <a href="#--tab-f-l-w" class="prop">--f-l-w</a> Default 200px
+          </div>
+          <div class="prop-wrp">
+            <a href="#--tab-f-l-h" class="prop">--f-l-h</a> Default 20px
+          </div>
+          <div class="prop-wrp">
+            <a href="#--tab-s-l-w" class="prop">--s-l-w</a> Default 130px
+          </div>
+          <div class="prop-wrp">
+            <a href="#--tab-s-l-h" class="prop">--s-l-h</a> Default 10px
+          </div>
+          <div class="prop-wrp">
+            <a href="#--tab-s-l-m-t" class="prop">--s-l-m-t</a> Default 10px
+          </div>
+          <div class="prop-wrp">
+            <a href="#--tab-l-h" class="prop">--l-h</a> Default 10px
+          </div>
+          <div class="prop-wrp">
+            <a href="#--tab-l-gap" class="prop">--l-gap</a>
+          </div>
+          <div class="prop-wrp">
+            <a href="#--tab-lines" class="prop">--lines</a> Default 3
+          </div>
+          <div class="prop-wrp">
+            <a href="#--tab-c-w" class="prop">--c-w</a> Default 100%
+          </div>
+        </div>
+
+        <p class="description">
+          <strong>*Note that,</strong> the
+          <span class="inline prop">--c-s</span> must be equal or bigger than
+          the <span class="inline prop">--f-l-h</span> +
+          <span class="inline prop">--s-l-h</span> +
+          <span class="inline prop">--l-h</span>
+        </p>
+
+        <div class="box">
+          <div class="box__wrp">
+            <pre><code class="code">&lt;div class="skeleton skeleton-card-3">&lt;/div></code></pre>
+            <div class="result">
+              <div class="result__wrp">
+                <div class="skeleton skeleton-card-3"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="properties">
+          <span class="class" id=".skeleton-list">.skeleton-list</span>
+          <div class="prop-wrp">
+            <a href="#--tab-l-h" class="prop">--l-h</a>
+          </div>
+          <div class="prop-wrp">
+            <a href="#--tab-lines" class="prop">--lines</a>
+          </div>
+          <div class="prop-wrp">
+            <a href="#--tab-l-gap" class="prop">--l-gap</a>
+          </div>
+          <div class="prop-wrp">
+            <a href="#--tab-bullet-ratio" class="prop" id="--bullet-ratio"
+              >--bullet-ratio</a
+            >
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="box__wrp">
+            <pre><code class="code">&lt;div 
+  class="skeleton skeleton-list" 
+  style="
+    --lines: 5;
+    --c-w: 400px;
+  "
+>&lt;/div></code></pre>
+            <div class="result">
+              <div class="result__wrp">
+                <div
+                  class="skeleton skeleton-list"
+                  style="--lines: 5; --c-w: 400px"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="properties">
+          <span class="class" id=".skeleton-youtube">.skeleton-youtube</span>
+          <div class="prop-wrp">
+            <a href="#--tab-rect-h" class="prop">--rect-h</a>
+            Default 150px
+          </div>
+          <div class="prop-wrp">
+            <a href="#--tab-c-s" class="prop">--c-s</a> Default 36px
+          </div>
+          <div class="prop-wrp">
+            <a href="#--tab-l-h" class="prop">--l-h</a>
+          </div>
+          <div class="prop-wrp">
+            <a href="#--tab-g-gap" class="prop">--g-gap</a> Default 10px
+          </div>
+          <div class="prop-wrp">
+            <a href="#--tab-l-gap" class="prop">--l-gap</a>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="box__wrp">
+            <pre><code class="code">&lt;div class="skeleton skeleton-youtube">&lt;/div></code></pre>
+            <div class="result">
+              <div class="result__wrp">
+                <div class="skeleton skeleton-youtube"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="properties">
+          <span class="class" id=".skeleton-image">.skeleton-image</span>
+          <div class="prop-wrp">
+            <a href="#--tab-i-w" class="prop" id="--i-w">--i-w</a>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="box__wrp">
+            <pre><code class="code">&lt;div 
+  class="skeleton skeleton-image" 
+  style="
+    --i-w: 300px;
+    --c-bg: #f8f7fc;
+  "
+>&lt;/div></code></pre>
+            <div class="result">
+              <div class="result__wrp">
+                <div
+                  class="skeleton skeleton-image"
+                  style="--c-bg: #f8f7fc; --i-w: 300px"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="./assets/js/highlight.pack.js"></script>
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad()
+    </script>
+  </body>
+</html>
