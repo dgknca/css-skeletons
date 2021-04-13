@@ -111,7 +111,7 @@
   }
 
   &#{&}-rect {
-    height: calc((var(--l-h) * var(--lines)) + (var(--l-gap) * (var(--lines) - 1)) + var(--rect-h) + var(--g-gap) + var(--c-p) * 2);
+    height: calc(((var(--l-h) * var(--lines)) + (var(--l-gap) * (var(--lines) - 1)) + var(--g-gap)) * clamp(0, var(--lines), 1) + var(--rect-h) + var(--c-p) * 2);
   
     &::before,
     &::after {

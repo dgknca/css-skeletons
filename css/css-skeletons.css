@@ -72,7 +72,7 @@
         -webkit-mask-repeat: no-repeat, no-repeat space;
         mask-repeat: no-repeat, no-repeat space; }
   .skeleton.skeleton-rect {
-    height: calc((var(--l-h) * var(--lines)) + (var(--l-gap) * (var(--lines) - 1)) + var(--rect-h) + var(--g-gap) + var(--c-p) * 2); }
+    height: calc(((var(--l-h) * var(--lines)) + (var(--l-gap) * (var(--lines) - 1)) + var(--g-gap)) * clamp(0, var(--lines), 1) + var(--rect-h) + var(--c-p) * 2); }
     .skeleton.skeleton-rect::before, .skeleton.skeleton-rect::after {
       --m: var(--ln) 0 0/100% var(--rect-h) no-repeat, 
               repeating-linear-gradient(#000 0 var(--l-h), transparent var(--l-h) calc(var(--l-h) + var(--l-gap))) 0 calc(var(--rect-h) + var(--g-gap)) / 100% calc(100% - (var(--rect-h) + var(--g-gap))) no-repeat;
