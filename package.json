@@ -4,8 +4,7 @@
   "description": "",
   "main": "./dist/css-skeletons.min.css",
   "scripts": {
-    "deploy": "gh-pages -d demo",
-    "format": "prettier --write '**/*.{md,html}'"
+    "deploy": "gh-pages -d demo"
   },
   "keywords": [
     "css content placeholder",
@@ -20,8 +19,7 @@
     "gulp-plumber": "^1.2.1",
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^5.1.0",
-    "node-sass": "^7.0.1",
-    "prettier": "^2.7.1"
+    "node-sass": "^7.0.1"
   },
   "author": "Doğukan Çavuş",
   "email": "dgknca@gmail.com",
