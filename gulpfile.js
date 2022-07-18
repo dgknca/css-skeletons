@@ -1,29 +1,29 @@
-var gulp = require('gulp')
-var plumber = require('gulp-plumber')
-var sass = require('gulp-sass')
-var rename = require('gulp-rename')
-const cleanCSS = require('gulp-clean-css');
+const gulp = require('gulp')
+const { parallel, series } = require('gulp')
+const plumber = require('gulp-plumber')
+const sass = require('gulp-sass')(require('node-sass'))
+const rename = require('gulp-rename')
+const cssnano = require('gulp-cssnano')
 
-var path = {
-  scss: { source: './css/css-skeletons.scss', target: './css' }
+const path = {
+  scss: { source: './src/index.scss', target: './dist' }
 }
 
-var listen = './css/**/**.scss'
-
-gulp.task('scss', function() {
-  gulp
+function css() {
+  return gulp
     .src(path.scss.source)
     .pipe(plumber())
     .pipe(sass())
-    .pipe(rename({ extname: '.css' }))
+    .pipe(rename({ basename: 'css-skeletons', extname: '.css' }))
     .pipe(gulp.dest(path.scss.target))
-    .pipe(cleanCSS({compatibility: 'ie8'}))
-    .pipe(rename({ extname: '.min.css' }))
+    .pipe(rename({ basename: 'css-skeletons', extname: '.min.css' }))
+    .pipe(cssnano())
     .pipe(gulp.dest(path.scss.target))
-})
+}
 
-gulp.task('watch', function() {
-  gulp.watch(listen, ['scss'])
-})
+function watch() {
+  gulp.watch(path.scss.source, css)
+}
 
-gulp.task('default', ['scss', 'watch'])
+exports.default = series(css, watch)
+exports.build = parallel(css, watch)
