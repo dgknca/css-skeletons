@@ -3,7 +3,7 @@ const { parallel, series } = require('gulp')
 const plumber = require('gulp-plumber')
 const sass = require('gulp-sass')(require('node-sass'))
 const rename = require('gulp-rename')
-const cssnano = require('gulp-cssnano')
+const cleanCSS = require('gulp-clean-css');
 
 const path = {
   scss: { source: './src/index.scss', target: './dist' }
@@ -17,7 +17,7 @@ function css() {
     .pipe(rename({ basename: 'css-skeletons', extname: '.css' }))
     .pipe(gulp.dest(path.scss.target))
     .pipe(rename({ basename: 'css-skeletons', extname: '.min.css' }))
-    .pipe(cssnano())
+    .pipe(cleanCSS())
     .pipe(gulp.dest(path.scss.target))
 }
 
