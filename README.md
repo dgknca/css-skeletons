@@ -10,10 +10,10 @@
 
 ```html
 <!-- UNPKG -->
-<link rel="stylesheet" href="https://unpkg.com/css-skeletons@1.0.5/dist/css-skeletons.min.css"/>
+<link rel="stylesheet" href="https://unpkg.com/css-skeletons@1.0.6/dist/css-skeletons.min.css"/>
 
 <!-- JSDelivr -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/css-skeletons@1.0.5/dist/css-skeletons.min.css"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/css-skeletons@1.0.6/dist/css-skeletons.min.css"/>
 ```
 
 or

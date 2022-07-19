@@ -1,6 +1,6 @@
 {
   "name": "css-skeletons",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "",
   "main": "./dist/css-skeletons.min.css",
   "scripts": {
