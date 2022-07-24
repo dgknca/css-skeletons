@@ -28,40 +28,16 @@ npm i css-skeletons
 import 'css-skeletons'
 ```
 
-## Examples
+## Development
 
-A few example from [documentation](https://dgknca.github.io/css-skeletons).
+Make sure you have [gulp-cli](https://prettier.io/) installed.
 
-```html
-<div
-  class="skeleton skeleton-line"
-  style="
-    --lines: 6; /* lines count */
-    --l-h: 10px; /* line height */
-    --l-gap: 8px; /* line gap */
-"
-></div>
-```
+```js
+npm install --global gulp-cli
+````
 
-![example 1](./demo/assets/img/skeleton-line.png)
+Then just run `gulp` to build/watch the `index.scss`.
 
-```html
-<div class="skeleton skeleton-card-3"></div>
-```
-
-![example 2](./demo/assets/img/skeleton-card-3.png)
-
-```html
-<div
-  class="skeleton skeleton-list no-animate"
-  style="
-        --lines: 5;
-        --bg: #ffb6b67d;
-        --c-bg: #ff92922b;
-        --bullet-ratio: 1.5;
-        --l-gap: 15px;
-"
-></div>
-```
-
-![example 3](./demo/assets/img/skeleton-list.png)
+```js
+gulp
+````
